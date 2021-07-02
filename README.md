@@ -1,2 +1,2 @@
-# practicejdk_15
-Practice java with jdk 15
+# Practice with JDK 15
+Practice java with Java Development Kit - JDK 15
