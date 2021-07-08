@@ -32,7 +32,7 @@ public class BackTrackingDuplicate {
 	public static void main(String[] args) {
 		
 		BackTrackingDuplicate backTracking = new BackTrackingDuplicate() ;
-		int[] arrayInts = {1, 2, 3, 3};
+		int[] arrayInts = {1, 2, 3, 4};
 		List<List<Integer>> result = backTracking.subsetsDuplicate(arrayInts);
 		result.forEach(System.out::println);
 	}
