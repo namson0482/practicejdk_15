@@ -19,7 +19,6 @@ public class ArrayListSort {
 		for (int counter : arraylist) {
 			System.out.println(counter);
 		}
-
 		Collections.sort(arraylist);
 		arraylist.forEach(System.out::println);
 		

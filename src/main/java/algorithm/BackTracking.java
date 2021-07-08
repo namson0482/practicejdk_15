@@ -32,7 +32,9 @@ public class BackTracking {
 		int[] arrayInts = {1, 2, 3};
 		List<List<Integer>> result = backTracking.subsets(arrayInts);
 		result.forEach(System.out::println);
+	
 	}
+	
 }
 
 

@@ -1,3 +1,4 @@
+package basic;
 import java.math.BigInteger;
 
 public class WizeLine {

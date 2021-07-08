@@ -30,8 +30,8 @@ public class BackTrackCombination {
 	public static void main(String[] args) {
 
 		BackTrackCombination backTrackCombination = new BackTrackCombination();
-		int[] arrayInts = { 2, 3, 6, 7 };
-		List<List<Integer>> result = backTrackCombination.combinationSum(arrayInts, 7);
+		int[] arrayInts = { 1, 2, 5};
+		List<List<Integer>> result = backTrackCombination.combinationSum(arrayInts, 3);
 		result.forEach(System.out::println);
 	}
 }

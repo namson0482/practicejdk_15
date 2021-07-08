@@ -1,3 +1,4 @@
+package basic;
 interface TestInterFace {
 	
 	default String getName() {
