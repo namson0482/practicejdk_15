@@ -78,9 +78,6 @@ public class Sum2Arrays {
 				System.out.println(" value of j = " + j);
 			}
 		}
-		
-		
-		
-		
+
 	}
 }

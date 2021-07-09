@@ -28,5 +28,6 @@ public class DefaultInterface {
 		TestClass testClass = new TestClass();
 		System.out.println(testClass.getName());
 		System.out.println(TestInterFace.getNameStatic());
+		System.out.println(TestInterFace.getNameStatic_2());
 	}
 }
