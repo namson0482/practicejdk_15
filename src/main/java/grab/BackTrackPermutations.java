@@ -52,14 +52,14 @@ public class BackTrackPermutations {
 				}
 				used[i] = true;
 				tempList.add(nums[i]);
-				backtrackUnique(list, tempList, nums, used, recursiveValue++);
+				backtrackUnique(list, tempList, nums, used, recursiveValue);
+				recursiveValue++;
 				used[i] = false;
 				tempList.remove(tempList.size() - 1);
-//				recursiveValue--;
-//				if(recursiveValue == 0) {
-//					System.out.println("------------------");
-//					list.forEach(System.out::println);
-//				}
+				if(recursiveValue - i == 1) {
+					System.out.println("------------------");
+					list.forEach(System.out::println);
+				}
 			}
 		}
 		
@@ -86,7 +86,7 @@ public class BackTrackPermutations {
 
 		BackTrackPermutations backTracking = new BackTrackPermutations();
 		// Give integer collection
-		int[] arrayIntsUnique = { 1, 1, 3};
+		int[] arrayIntsUnique = {1, 2, 3};
 		List<List<Integer>> resultUnique = backTracking.permuteUnique(arrayIntsUnique);
 		System.out.println("------------------");
 		resultUnique.forEach(System.out::println);
