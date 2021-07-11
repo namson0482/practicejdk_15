@@ -1,4 +1,4 @@
-package array;
+package grab;
 
 public class Sum2Arrays {
 

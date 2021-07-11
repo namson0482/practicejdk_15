@@ -1,10 +1,11 @@
-package algorithm;
+package grab;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class BackTrackPermutations {
+
 	
 	public List<List<Integer>> permute(int[] nums) {
 
@@ -35,11 +36,11 @@ public class BackTrackPermutations {
 		
 		List<List<Integer>> list = new ArrayList<>();
 		Arrays.sort(nums);
-		backtrackUnique(list, new ArrayList<>(), nums, new boolean[nums.length]);
+		backtrackUnique(list, new ArrayList<>(), nums, new boolean[nums.length], 0);
 		return list;
 	}
 
-	private void backtrackUnique(List<List<Integer>> list, List<Integer> tempList, int[] nums, boolean[] used) {
+	private void backtrackUnique(List<List<Integer>> list, List<Integer> tempList, int[] nums, boolean[] used, int recursiveValue) {
 		
 		
 		if (tempList.size() == nums.length) {
@@ -51,9 +52,14 @@ public class BackTrackPermutations {
 				}
 				used[i] = true;
 				tempList.add(nums[i]);
-				backtrackUnique(list, tempList, nums, used);
+				backtrackUnique(list, tempList, nums, used, recursiveValue++);
 				used[i] = false;
 				tempList.remove(tempList.size() - 1);
+//				recursiveValue--;
+//				if(recursiveValue == 0) {
+//					System.out.println("------------------");
+//					list.forEach(System.out::println);
+//				}
 			}
 		}
 		
@@ -66,7 +72,7 @@ public class BackTrackPermutations {
 //		int[] arrayIntsPermute = { 1, 1, 3};
 //		List<List<Integer>> resultPermute = backTracking.permute(arrayIntsPermute);
 //		resultPermute.forEach(System.out::println);
-//	}
+//	}	
 
 	/**
 	 * Given a collection of numbers, nums, that might contain duplicates, return all possible unique permutations in any order.
@@ -87,4 +93,5 @@ public class BackTrackPermutations {
 
 	}
 	 
+
 }

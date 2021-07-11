@@ -11,14 +11,16 @@ public class BackTrackingDuplicate {
 		List<List<Integer>> list = new ArrayList<>();
 		Arrays.sort(nums);
 		backtrackDuplicate(list, new ArrayList<>(), nums, 0);
+		list.sort((e1, e2) -> Integer.valueOf(e1.size()).compareTo(Integer.valueOf(e2.size())));
 		return list;
 	}
 
 	private void backtrackDuplicate(List<List<Integer>> list, List<Integer> tempList, int[] nums, int start) {
 		
 		if(tempList.size() > 0) {
-			list.add(new ArrayList<>(tempList));
+			
 		}
+		list.add(new ArrayList<>(tempList));
 		for (int i = start; i < nums.length; i++) {
 			if(i > start && nums[i] == nums[i-1]) {
 				continue; // skip duplicates
@@ -32,7 +34,7 @@ public class BackTrackingDuplicate {
 	public static void main(String[] args) {
 		
 		BackTrackingDuplicate backTracking = new BackTrackingDuplicate() ;
-		int[] arrayInts = {1, 2, 3, 4};
+		int[] arrayInts = {1, 2, 2};
 		List<List<Integer>> result = backTracking.subsetsDuplicate(arrayInts);
 		result.forEach(System.out::println);
 	}

@@ -14,8 +14,7 @@ public class BackTrackCombinationII {
 
 	}
 
-	private void backtrackSkipDuplicate(List<List<Integer>> list, List<Integer> tempList, int[] nums, int remain,
-			int start) {
+	private void backtrackSkipDuplicate(List<List<Integer>> list, List<Integer> tempList, int[] nums, int remain, int start) {
 		if (remain < 0)
 			return;
 		else if (remain == 0)
