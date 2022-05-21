@@ -59,15 +59,6 @@ public class BackTrackPermutations {
 		
 	}
 	
-//	public static void main(String[] args) {
-//		
-//		BackTrackPermutations backTracking = new BackTrackPermutations();
-//		// give array nums of distinct integer 
-//		int[] arrayIntsPermute = { 1, 1, 3};
-//		List<List<Integer>> resultPermute = backTracking.permute(arrayIntsPermute);
-//		resultPermute.forEach(System.out::println);
-//	}
-
 	/**
 	 * Given a collection of numbers, nums, that might contain duplicates, return all possible unique permutations in any order.
 	 * Input: nums = [1,1,2]
