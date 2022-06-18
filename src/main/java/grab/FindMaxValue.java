@@ -7,7 +7,7 @@ import java.util.List;
 public class FindMaxValue {
 
 	public static void findArrayMax() {
-
+/*
 		int []arrayInteger = {2, 1, 3};
 		Arrays.sort(arrayInteger);
 		List<List<Integer>> listResult = new ArrayList<List<Integer>>();
@@ -21,7 +21,7 @@ public class FindMaxValue {
 //			return 0;
 //		});
 		listResult.forEach(System.out::println);
-		System.out.println("Max Value: " + maxValue);
+		System.out.println("Max Value: " + maxValue);*/
 	}
 
 	public static int backtrack(List<List<Integer>> listResult, List<Integer> listTemp, int[] nums, int start, int n) {

@@ -3,5 +3,9 @@
   <groupId>practice</groupId>
   <artifactId>practice-jdk-15</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <properties>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+  </properties>
   <name>Son</name>
 </project>
