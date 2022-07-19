@@ -35,7 +35,6 @@ public class LongestString {
 		}
 		return input.substring(start, start + maxLength);
 	}
-	
 
 	public static String findLongestString(String input) {
 
@@ -72,7 +71,9 @@ public class LongestString {
 
 	public static void main(String[] args) {
 
+		System.out.println("Hello Java 18");
 		String input = "tikivn";
 		System.out.println(findLongestString_1(input));
+
 	}
 }
