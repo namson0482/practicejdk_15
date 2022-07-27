@@ -3,6 +3,7 @@ package vunam.disruptor;
 import com.lmax.disruptor.BusySpinWaitStrategy;
 import com.lmax.disruptor.EventHandler;
 import com.lmax.disruptor.RingBuffer;
+import com.lmax.disruptor.WaitStrategy;
 import com.lmax.disruptor.dsl.Disruptor;
 import com.lmax.disruptor.dsl.ProducerType;
 
@@ -12,7 +13,7 @@ import java.util.concurrent.Executors;
 /**
  * Created by Rohit Sachan on 1/13/14.
  */
-public class Sample2 {
+public class LmaxDisruptor {
 
     public static void main(String[] args) {
         //Creating BlockingQueue of size 10
@@ -61,13 +62,18 @@ public class Sample2 {
 
         RingBuffer<Message> ringBuffer = disruptor.start();
 
-        Producer producer = new Producer(ringBuffer);
+        Producer producerOne = new Producer(ringBuffer);
+        Producer producerTwo = new Producer(ringBuffer);
 
         //starting producer to produce messages in queue
-        Thread p = new Thread(producer);
-        p.start();
+        Thread pOne = new Thread(producerOne);
+        pOne.start();
+
+        Thread pTwo = new Thread(producerTwo);
+        pTwo.start();
         try {
-            p.join();
+            pOne.join();
+            pTwo.join();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

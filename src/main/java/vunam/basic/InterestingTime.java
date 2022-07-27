@@ -1,4 +1,4 @@
-package basic;
+package vunam.basic;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

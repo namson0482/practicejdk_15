@@ -1,4 +1,4 @@
-package basic;
+package vunam.basic;
 interface TestInterFace {
 	
 	default String getName() {

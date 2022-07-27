@@ -1,4 +1,4 @@
-package grab;
+package vunam.grab;
 
 public class Sum2Arrays {
 

@@ -1,4 +1,4 @@
-package basic;
+package vunam.basic;
 import java.math.BigInteger;
 
 public class WizeLine {

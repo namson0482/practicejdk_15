@@ -1,4 +1,4 @@
-package basic;
+package vunam.basic;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
