@@ -8,7 +8,7 @@ package vunam.array;
  */
 public class MergeArrayMedian {
 
-    public double findMedianSortArrays(int []nums1, int []nums2) {
+    public double findMedianSortedArrays(int []nums1, int []nums2) {
         int []nums3 = new int[nums1.length + nums2.length];
 
         int i=0;
@@ -45,7 +45,7 @@ public class MergeArrayMedian {
         int []nums1 = {1, 2};
         int []nums2 = {3, 4};
         MergeArrayMedian mergeArrayMedian = new MergeArrayMedian();
-        double result = mergeArrayMedian.findMedianSortArrays(nums1, nums2);
+        double result = mergeArrayMedian.findMedianSortedArrays(nums1, nums2);
         System.out.println("Value: " + result);
     }
 }
