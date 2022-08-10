@@ -18,7 +18,9 @@ public class MostWaterContainer {
         return maxarea;
     }
 
+
     public static void main(String[] args) {
+
         MostWaterContainer mostWaterContainer = new MostWaterContainer() ;
         int []height = {1,8,6,2,5,4,8,3,7};
         System.out.println(mostWaterContainer.maxArea(height));
