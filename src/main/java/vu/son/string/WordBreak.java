@@ -3,6 +3,9 @@ package vu.son.string;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * WordBreak algorithm
+ */
 public class WordBreak {
 
 	public static void main(String[] args) {
@@ -12,6 +15,7 @@ public class WordBreak {
 		dict.add("and");
 		dict.add("sand");
 		dict.add("dog");
+
 		System.out.println(new WordBreak().wordbreak("catsanddog", dict));
 	}
 
