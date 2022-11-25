@@ -1,4 +1,4 @@
-package vu.son.leetcode.datastructure;
+package vu.son.leetcode.datastructure.twopointers;
 
 import java.util.HashMap;
 import java.util.Map;

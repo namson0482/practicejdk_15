@@ -1,4 +1,4 @@
-package vu.son.leetcode.datastructure;
+package vu.son.leetcode.datastructure.twopointers;
 
 /**
  * @author: Son Vu
