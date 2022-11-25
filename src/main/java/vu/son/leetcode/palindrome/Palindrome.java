@@ -1,4 +1,4 @@
-package vu.son.leetcode.datastructure.twopointers;
+package vu.son.leetcode.palindrome;
 
 /**
  * @author: Son Vu
