@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:src/main/java/vunam/basic/InterestingTime.java
 package vunam.basic;
+========
+package vu.son.basic;
+>>>>>>>> revert-7-beta:src/main/java/vu/son/basic/InterestingTime.java
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

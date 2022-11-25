@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:src/main/java/vunam/string/FindOccurrenciesInArray.java
 package vunam.string;
+========
+package vu.son.string;
+>>>>>>>> revert-7-beta:src/main/java/vu/son/string/FindOccurrenciesInArray.java
 
 import java.util.*;
 import java.util.stream.Collectors;

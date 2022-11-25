@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:src/main/java/vunam/WizeLine.java
 package vunam;
+========
+package vu.son.basic;
+>>>>>>>> revert-7-beta:src/main/java/vu/son/basic/WizeLine.java
 import java.math.BigInteger;
 
 public class WizeLine {

@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:src/main/java/vunam/grab/Sum2Arrays.java
 package vunam.grab;
+========
+package vu.son.grab;
+>>>>>>>> revert-7-beta:src/main/java/vu/son/grab/Sum2Arrays.java
 
 public class Sum2Arrays {
 

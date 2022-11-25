@@ -1,13 +1,16 @@
+<<<<<<<< HEAD:src/main/java/vunam/grab/FindMaxValue.java
 package vunam.grab;
+========
+package vu.son.grab;
+>>>>>>>> revert-7-beta:src/main/java/vu/son/grab/FindMaxValue.java
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class FindMaxValue {
 
 	public static void findArrayMax() {
-
+/*
 		int []arrayInteger = {2, 1, 3};
 		Arrays.sort(arrayInteger);
 		List<List<Integer>> listResult = new ArrayList<List<Integer>>();
@@ -21,7 +24,7 @@ public class FindMaxValue {
 //			return 0;
 //		});
 		listResult.forEach(System.out::println);
-		System.out.println("Max Value: " + maxValue);
+		System.out.println("Max Value: " + maxValue);*/
 	}
 
 	public static int backtrack(List<List<Integer>> listResult, List<Integer> listTemp, int[] nums, int start, int n) {

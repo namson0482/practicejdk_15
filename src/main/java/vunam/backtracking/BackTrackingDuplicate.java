@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:src/main/java/vunam/backtracking/BackTrackingDuplicate.java
 package vunam.backtracking;
+========
+package vu.son.algorithm;
+>>>>>>>> revert-7-beta:src/main/java/vu/son/algorithm/BackTrackingDuplicate.java
 
 import java.util.ArrayList;
 import java.util.Arrays;

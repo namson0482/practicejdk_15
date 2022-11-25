@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:src/main/java/vunam/string/Java8Main.java
 package vunam.string;
+========
+package vu.son.string;
+>>>>>>>> revert-7-beta:src/main/java/vu/son/string/Java8Main.java
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,8 +47,8 @@ public class Java8Main {
 		System.out.println(str_1 == str_3);
 		System.out.println(str_1.equals(str_3));
 		
-//		Java8Main java8 = new Java8Main();
-//		java8.practiceStream();
+//		Java8Main vu.son.java8 = new Java8Main();
+//		vu.son.java8.practiceStream();
 		
 	}
 }

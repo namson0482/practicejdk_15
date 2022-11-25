@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:src/main/java/vunam/hashmap/FailFastExample.java
 package vunam.hashmap;
+========
+package vu.son.hash;
+>>>>>>>> revert-7-beta:src/main/java/vu/son/hash/FailFastExample.java
 
 import java.util.ArrayList;
 import java.util.Iterator;

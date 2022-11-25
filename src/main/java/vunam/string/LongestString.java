@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:src/main/java/vunam/string/LongestString.java
 package vunam.string;
+========
+package vu.son.string;
+>>>>>>>> revert-7-beta:src/main/java/vu/son/string/LongestString.java
 
 import java.util.HashMap;
 import java.util.Map;

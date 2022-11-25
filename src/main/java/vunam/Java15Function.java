@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:src/main/java/vunam/Java15Function.java
 package vunam;
+========
+package vu.son.basic;
+>>>>>>>> revert-7-beta:src/main/java/vu/son/basic/Java15Function.java
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;

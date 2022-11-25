@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:src/main/java/vunam/string/EqualsHashCode.java
 package vunam.string;
+========
+package vu.son.string;
+>>>>>>>> revert-7-beta:src/main/java/vu/son/string/EqualsHashCode.java
 
 import java.util.function.Consumer;
 

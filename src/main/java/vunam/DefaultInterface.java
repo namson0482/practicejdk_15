@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:src/main/java/vunam/DefaultInterface.java
 package vunam;
+========
+package vu.son.basic;
+>>>>>>>> revert-7-beta:src/main/java/vu/son/basic/DefaultInterface.java
 interface TestInterFace {
 	
 	default String getName() {

@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:src/main/java/vunam/java8/ReferenceParticularType.java
 package vunam.java8;
+========
+package vu.son.java8;
+>>>>>>>> revert-7-beta:src/main/java/vu/son/java8/ReferenceParticularType.java
 
 import java.util.ArrayList;
 import java.util.List;

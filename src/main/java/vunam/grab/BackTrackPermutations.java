@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:src/main/java/vunam/grab/BackTrackPermutations.java
 package vunam.grab;
+========
+package vu.son.grab;
+>>>>>>>> revert-7-beta:src/main/java/vu/son/grab/BackTrackPermutations.java
 
 import java.util.ArrayList;
 import java.util.Arrays;

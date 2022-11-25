@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:src/main/java/vunam/grab/Consecutive.java
 package vunam.grab;
+========
+package vu.son.grab;
+>>>>>>>> revert-7-beta:src/main/java/vu/son/grab/Consecutive.java
 
 public class Consecutive {
 

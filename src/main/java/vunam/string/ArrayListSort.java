@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:src/main/java/vunam/string/ArrayListSort.java
 package vunam.string;
+========
+package vu.son.string;
+>>>>>>>> revert-7-beta:src/main/java/vu/son/string/ArrayListSort.java
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -40,5 +44,6 @@ public class ArrayListSort {
 	public static void main(String args[]) {
 		
 		sortByJava8();
+
 	}
 }

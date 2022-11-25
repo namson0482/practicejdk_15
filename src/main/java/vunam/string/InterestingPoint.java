@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:src/main/java/vunam/string/InterestingPoint.java
 package vunam.string;
+========
+package vu.son.string;
+>>>>>>>> revert-7-beta:src/main/java/vu/son/string/InterestingPoint.java
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

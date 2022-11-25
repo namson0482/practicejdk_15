@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:src/main/java/vunam/hashmap/HashMapTest.java
 package vunam.hashmap;
+========
+package vu.son.hash;
+>>>>>>>> revert-7-beta:src/main/java/vu/son/hash/HashMapTest.java
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;

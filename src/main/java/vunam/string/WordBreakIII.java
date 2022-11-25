@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:src/main/java/vunam/string/WordBreakIII.java
 package vunam.string;
+========
+package vu.son.string;
+>>>>>>>> revert-7-beta:src/main/java/vu/son/string/WordBreakIII.java
 
 import java.util.ArrayList;
 import java.util.Arrays;

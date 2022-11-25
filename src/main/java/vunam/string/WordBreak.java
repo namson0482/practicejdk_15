@@ -1,8 +1,15 @@
+<<<<<<<< HEAD:src/main/java/vunam/string/WordBreak.java
 package vunam.string;
+========
+package vu.son.string;
+>>>>>>>> revert-7-beta:src/main/java/vu/son/string/WordBreak.java
 
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * WordBreak algorithm
+ */
 public class WordBreak {
 
 	public static void main(String[] args) {
@@ -12,6 +19,7 @@ public class WordBreak {
 		dict.add("and");
 		dict.add("sand");
 		dict.add("dog");
+
 		System.out.println(new WordBreak().wordbreak("catsanddog", dict));
 	}
 
