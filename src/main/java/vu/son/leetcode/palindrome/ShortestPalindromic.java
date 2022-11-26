@@ -36,7 +36,7 @@ public class ShortestPalindromic {
 
     // Driver Code
     public static final void main(String[] args) {
-        String input = "abcd";
+        String input = "abcda";
 
         System.out.println(new ShortestPalindromic().shortestPalindrome(input));
 
