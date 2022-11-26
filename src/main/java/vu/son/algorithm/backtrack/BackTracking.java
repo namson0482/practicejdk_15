@@ -36,11 +36,3 @@ public class BackTracking {
 	}
 	
 }
-
-
-//int value = tempList.stream().collect(Collectors.summingInt(Integer::intValue));
-//int total = tempList.stream().collect(Collectors.summingInt(x -> x));
-//int value = tempList.stream().mapToInt(x -> x).sum();
-//if(value == 9) {
-//	System.out.println(tempList);
-//}
