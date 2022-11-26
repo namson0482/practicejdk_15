@@ -36,8 +36,6 @@ public class ReverseInteger {
     public static void main(String[] args) {
 
         int temp = 1534236469;
-//        2 147 483 647
-//        9 646 324 350
         System.out.println(ReverseInteger.reverse(temp));
     }
 }
