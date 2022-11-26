@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * BackTrack algorithm
+ */
 public class BackTrack {
 
     public List<List<Integer>> subSets(int []nums) {
@@ -26,6 +29,7 @@ public class BackTrack {
     }
 
     public static void main(String[] args) {
+
         int []numbers = new int[] {1, 2};
         BackTrack backTrack = new BackTrack();
         List<List<Integer>> result = backTrack.subSets(numbers);
