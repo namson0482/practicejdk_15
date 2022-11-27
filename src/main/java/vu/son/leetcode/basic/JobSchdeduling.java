@@ -1,5 +1,7 @@
 package vu.son.leetcode.basic;
 
+import org.apache.commons.lang.time.StopWatch;
+
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -59,10 +61,15 @@ public class JobSchdeduling {
     }
 
     public static void main(String[] args) {
+        StopWatch stopwatch = new StopWatch();
+        stopwatch.start();
         int []startTime = new int[]{1,  2,  4,   6,  3};
         int []endTime = new int[]  {3,  5,  6,   9,  10};
         int []profit = new int[]   {20, 20, 70,  60, 100};
         JobSchdeduling job = new JobSchdeduling();
         System.out.println(job.jobScheduling(startTime, endTime, profit));
+        stopwatch.stop();
+        long timeTaken = stopwatch.getTime();
+        System.out.println(timeTaken + " ms");
     }
 }
