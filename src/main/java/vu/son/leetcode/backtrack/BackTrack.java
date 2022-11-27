@@ -34,6 +34,5 @@ public class BackTrack {
         BackTrack backTrack = new BackTrack();
         List<List<Integer>> result = backTrack.subSets(numbers);
         result.forEach(System.out::println);
-
     }
 }
