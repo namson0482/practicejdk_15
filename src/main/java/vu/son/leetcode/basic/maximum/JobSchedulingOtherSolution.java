@@ -1,4 +1,4 @@
-package vu.son.leetcode.basic;
+package vu.son.leetcode.basic.maximum;
 
 import org.apache.commons.lang.time.StopWatch;
 
