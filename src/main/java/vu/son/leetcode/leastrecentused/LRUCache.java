@@ -1,4 +1,4 @@
-package vu.son.algorithm.lru;
+package vu.son.leetcode.leastrecentused;
 
 import java.util.Iterator;
 import java.util.LinkedHashSet;
@@ -41,12 +41,6 @@ public class LRUCache {
             System.out.print(list.get(i) + " ");
         }
 
-        // The descendingIterator() method of java.util.LinkedList
-        // class is used to return an iterator over the elements
-        // in this LinkedList in reverse sequential order
-//        Iterator<Integer> itr = list.descendingIterator();
-//        while (itr.hasNext())
-//            System.out.print(itr.next() + " ");
     }
 
     public void displayOne() {

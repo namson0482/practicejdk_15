@@ -1,4 +1,4 @@
-package vu.son.algorithm.lru;
+package vu.son.algorithm.queue;
 
 // Java program to reverse a Queue
 

@@ -1,4 +1,4 @@
-package vu.son.algorithm.lru;
+package vu.son.algorithm.queue;
 
 import java.util.Deque;
 import java.util.Iterator;
