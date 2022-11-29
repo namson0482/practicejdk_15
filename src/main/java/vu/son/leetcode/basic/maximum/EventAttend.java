@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.PriorityQueue;
+import java.util.TreeSet;
 
 
 /**
@@ -21,9 +22,12 @@ public class EventAttend {
 
     }
 
-    public int maxEvents(int[][] events) {
-        PriorityQueue<Integer> pq = new PriorityQueue<>();
-        Arrays.sort(events, Comparator.comparingInt(a -> a[0]));
+    public int maxEventsTemp(int[][] events) {
+        PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> {
+            if(a>b) return 1;
+            return -1;
+        });
+        Arrays.sort(events, Comparator.comparingInt(a->a[0]));
 
         int i = 0, result = 0, days = 0, length = events.length;
         while (!pq.isEmpty() || i < length) {
@@ -47,6 +51,28 @@ public class EventAttend {
         return result;
     }
 
+    public int maxEvents(int[][] events) {
+        Arrays.sort(events,(a,b) -> a[1] != b[1] ? a[1] - b[1] : a[0] - b[0]);
+        TreeSet<Integer> st = new TreeSet<>();
+        int min = (int)1e5;
+        int max = 1;
+
+        for(var e:events){
+            min = Math.min(min,e[0]);
+            max = Math.max(max,e[1]);
+        }
+        for(int i = min;i <= max;i++) st.add(i);
+        int ans = 0;
+
+        for(var e:events){
+            var d = st.ceiling(e[0]);
+            if(d == null || d > e[1]) continue;
+            ++ans;
+            st.remove(d);
+        }
+        return ans;
+    }
+
     public static void main(String[] args) {
 
         int [][]events = new int[][]
@@ -54,6 +80,7 @@ public class EventAttend {
                                             {1, 2},
                                             {2, 3},
                                             {3, 4},
+                                            {1, 3},
                                             {1, 2},
 
                                     };

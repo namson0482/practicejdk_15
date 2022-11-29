@@ -58,29 +58,6 @@ public class TaxiEarnings {
         }
     }
 
-    public long maxTaxiEarningsTemp(int endPoint, int [][]rides ) {
-        Point []points = new Point[rides.length];
-
-        for(int i=0;i<rides.length;i++) {
-            points[i] = new Point(rides[i][0], rides[i][1], rides[i][2]);
-        }
-        Arrays.sort(points, Comparator.comparingInt(a -> a.end));
-
-        long []dp = new long[rides.length];
-        dp[0] = points[0].profit;
-        for(int i=1;i<rides.length;i++) {
-            dp[i] = Math.max(dp[i-1], points[i].profit);
-            for(int j=i-1;j>=0;j--) {
-                if(points[j].end <= points[i].start) {
-                    dp[i] = Math.max(dp[i], dp[j] + points[i].profit);
-                    break;
-                }
-            }
-        }
-
-        return dp[rides.length-1];
-    }
-
     public long maxTaxiEarnings2(int n, int[][] rides) {
         Arrays.sort(rides, (a, b) -> Integer.compare(a[1], b[1]));
         long[] dp = new long[n + 1];
@@ -162,6 +139,29 @@ public class TaxiEarnings {
         return max;
     }
 
+    public long maxTaxiEarningsTemp(int endPoint, int [][]rides ) {
+        Point []points = new Point[rides.length];
+
+        for(int i=0;i<rides.length;i++) {
+            points[i] = new Point(rides[i][0], rides[i][1], rides[i][2]);
+        }
+        Arrays.sort(points, Comparator.comparingInt(a -> a.end));
+
+        long []dp = new long[rides.length];
+        dp[0] = points[0].profit;
+        for(int i=1;i<rides.length;i++) {
+            dp[i] = Math.max(dp[i-1], points[i].profit);
+            for(int j=i-1;j>=0;j--) {
+                if(points[j].end <= points[i].start) {
+                    dp[i] = Math.max(dp[i], dp[j] + points[i].profit);
+                    break;
+                }
+            }
+        }
+
+        return dp[rides.length-1];
+    }
+
     public static void main(String[] args) {
 
         StopWatch stopwatch = new StopWatch();
@@ -185,7 +185,7 @@ public class TaxiEarnings {
 
 
         TaxiEarnings taxi = new TaxiEarnings();
-        long result = taxi.maxTaxiEarningsPerformance(20, rides);
+        long result = taxi.maxTaxiEarningsTemp(20, rides);
         System.out.println(result);
         stopwatch.stop();
         long timeTaken = stopwatch.getTime();
