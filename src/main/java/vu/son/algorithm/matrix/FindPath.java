@@ -49,6 +49,6 @@ public class FindPath {
         // start from `(0, 0)` cell
         int x = 0, y = 0;
 
-        findPaths(mat, path, x, y);
+        FindPath.findPaths(mat, path, x, y);
     }
 }
