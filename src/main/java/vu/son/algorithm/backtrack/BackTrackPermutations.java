@@ -73,8 +73,8 @@ public class BackTrackPermutations {
 
 		BackTrackPermutations backTracking = new BackTrackPermutations();
 		// Give integer collection
-		int[] arrayIntsUnique = { 1, 1, 3};
-		List<List<Integer>> resultUnique = backTracking.permuteUnique(arrayIntsUnique);
+		int[] arrayIntsUnique = { 1, 2, 3};
+		List<List<Integer>> resultUnique = backTracking.permute(arrayIntsUnique);
 		System.out.println("------------------");
 		resultUnique.forEach(System.out::println);
 
