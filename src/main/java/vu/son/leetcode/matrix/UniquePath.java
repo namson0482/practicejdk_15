@@ -62,6 +62,6 @@ public class UniquePath {
 
     public static void main(String[] args) {
         UniquePath uniquePath = new UniquePath();
-        System.out.println(uniquePath.uniquePathsTemp(3, 2));
+        System.out.println(uniquePath.uniquePathsTemp(1, 1));
     }
 }
