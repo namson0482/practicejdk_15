@@ -1,8 +1,13 @@
 package vu.son.leetcode.matrix;
 
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+import java.util.Stack;
+
 public class MatrixMaximumZeroLength {
 
-    int maxZeroLength = 0;
+    int maxZerosLength = 0;
     long maxNumber = 1;
 
     // Four directions that we will move: right, down, left, up.
@@ -17,52 +22,74 @@ public class MatrixMaximumZeroLength {
         return res;
     }
 
-    private void findMaximumPathZeros(int[][] matrix, int row, int col, int[][] visited) {
+
+    private void calculateZeros(Stack<Integer> result) {
+        Iterator<Integer> iterator = result.iterator();
+        int currentValue = 0;
+        if(result.size() > 0) {
+            currentValue = iterator.next();
+        }
+
+        while(iterator.hasNext()) {
+            int tempNextValue = iterator.next();
+            currentValue = currentValue * tempNextValue;
+            int tempMaxZerosLength = maxZeros(currentValue);
+            if(tempMaxZerosLength > maxZerosLength) {
+                maxZerosLength = tempMaxZerosLength;
+                maxNumber = currentValue;
+                if(maxNumber == 360000000) {
+                    System.out.println("Son");
+                }
+            }
+        }
+
+    }
+
+    private void findMaximumPathZeros(int[][] matrix, int row, int col, int[][] visited, Stack<Integer> result) {
 
         if (row < 0 || row > matrix.length - 1 || col > matrix[0].length - 1 || col < 0) {
             return;
         }
 
-        if (visited[row][col] == 101) {
-            return;
-        }
-
-        visited[row][col] = 101;
-
-        long tempNumber = matrix[row][col];
-        int tempMax = maxZeros(tempNumber * maxNumber);
-        if (tempMax > maxZeroLength) {
-            maxZeroLength = tempMax;
-            maxNumber = tempNumber * maxNumber;
-        }
+        calculateZeros(result);
 
 
-        for (int i = 0; i < directions.length; i++) {
-            row += directions[i][0];
-            col += directions[i][1];
+        for (int []direction: directions) {
+            if(row + direction[0] < 0 || row + direction[0] > visited.length - 1 ||
+                    col + direction[1] < 0 || col + direction[1] > visited[0].length - 1 ||
+                    visited[row + direction[0]][col + direction[1]] == 101) {
+                continue;
+            }
 
-            findMaximumPathZeros(matrix, row, col, visited);
+            row += direction[0];
+            col += direction[1];
+            visited[row][col] = 101;
+            result.add(matrix[row][col]);
 
-            row -= directions[i][0];
-            col -= directions[i][1];
+            findMaximumPathZeros(matrix, row, col, visited, result);
+
+            result.pop();
+            visited[row][col] = 0;
+
+            row -= direction[0];
+            col -= direction[1];
         }
     }
 
     public long maxZerosPath(int[][] matrix) {
 
-        int maxZeroLengthTemp = 0;
-        long maxNumberTemp = 1;
+
+        maxZerosLength = 0;
+        maxNumber = 1;
 
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[0].length; j++) {
-                maxZeroLength = 0;
-                maxNumber = 1;
                 int[][] visited = new int[matrix.length][matrix[0].length];
-                findMaximumPathZeros(matrix, i, j, visited);
-                if(maxZeroLength > maxZeroLengthTemp) {
-                    maxZeroLengthTemp = maxZeroLength;
-                    maxNumberTemp = maxNumber;
-                }
+                visited[i][j] = 101;
+                Stack<Integer> result = new Stack();
+
+                result.add(matrix[i][j]);
+                findMaximumPathZeros(matrix, i, j, visited, result);
             }
         }
         return maxNumber;
@@ -75,6 +102,14 @@ public class MatrixMaximumZeroLength {
                         {10, 5, 10},
                         {10, 8, 9}
                 };
+
+
+//        int[][] mat =
+//                {
+//                        {10, 10},
+//                        {10, 1},
+//
+//                };
         MatrixMaximumZeroLength matrixMaximumZeroLength = new MatrixMaximumZeroLength();
         System.out.println(matrixMaximumZeroLength.maxZerosPath(mat));
     }

@@ -209,6 +209,10 @@ public class MatrixFindPath {
         vec.add(new Vector<Integer>());
 //        vec.add(new Vector<Integer>());
 
+//        {10,       100,     10}
+//        {1,        10,      1}
+//        {1,        10,      1}
+
         vec.get(0).add(10); vec.get(0).add(100); vec.get(0).add(10);
         vec.get(1).add(1); vec.get(1).add(10);  vec.get(1).add(1);
         vec.get(2).add(1); vec.get(2).add(10); vec.get(2).add(1);
