@@ -4,6 +4,8 @@ public class LeetCodeLinkedList {
 
     ListNode head;
 
+    int size;
+
     public LeetCodeLinkedList insert(LeetCodeLinkedList list, int data) {
         ListNode node = new ListNode(data);
         if(list.head == null) {
@@ -15,6 +17,7 @@ public class LeetCodeLinkedList {
             }
             last.next = node;
         }
+        size++;
         return list;
     }
 
