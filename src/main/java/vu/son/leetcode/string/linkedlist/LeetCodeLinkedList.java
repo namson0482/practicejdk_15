@@ -1,30 +1,10 @@
 package vu.son.leetcode.string.linkedlist;
 
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode() {
-    }
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-}
-
-
-
-public class ReverseLinkedList {
+public class LeetCodeLinkedList {
 
     ListNode head;
 
-    public ReverseLinkedList insert(ReverseLinkedList list, int data) {
+    public LeetCodeLinkedList insert(LeetCodeLinkedList list, int data) {
         ListNode node = new ListNode(data);
         if(list.head == null) {
             list.head = node;
@@ -129,20 +109,20 @@ public class ReverseLinkedList {
     }
 
     public static void main(String[] args) {
-        ReverseLinkedList reverseLinkedList = new ReverseLinkedList();
-        reverseLinkedList = reverseLinkedList.insert(reverseLinkedList, 1);
-        reverseLinkedList = reverseLinkedList.insert(reverseLinkedList, 2);
-        reverseLinkedList = reverseLinkedList.insert(reverseLinkedList, 3);
-        reverseLinkedList = reverseLinkedList.insert(reverseLinkedList, 4);
-        reverseLinkedList = reverseLinkedList.insert(reverseLinkedList, 5);
+        LeetCodeLinkedList leetCodeLinkedList = new LeetCodeLinkedList();
+        leetCodeLinkedList = leetCodeLinkedList.insert(leetCodeLinkedList, 1);
+        leetCodeLinkedList = leetCodeLinkedList.insert(leetCodeLinkedList, 2);
+        leetCodeLinkedList = leetCodeLinkedList.insert(leetCodeLinkedList, 3);
+        leetCodeLinkedList = leetCodeLinkedList.insert(leetCodeLinkedList, 4);
+        leetCodeLinkedList = leetCodeLinkedList.insert(leetCodeLinkedList, 5);
 //        reverseLinkedList = reverseLinkedList.insert(reverseLinkedList, 6);
 //        reverseLinkedList = reverseLinkedList.insert(reverseLinkedList, 7);
 //        reverseLinkedList = reverseLinkedList.insert(reverseLinkedList, 8);
 
-        reverseLinkedList.printValues();
+        leetCodeLinkedList.printValues();
 
-        reverseLinkedList.reverseBetweenTemp(reverseLinkedList.head, 2, 4);
-        reverseLinkedList.printValues();
+        leetCodeLinkedList.reverseBetweenTemp(leetCodeLinkedList.head, 2, 4);
+        leetCodeLinkedList.printValues();
 
     }
 }

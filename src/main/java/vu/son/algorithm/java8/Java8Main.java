@@ -3,12 +3,10 @@ package vu.son.algorithm.java8;
 public class Java8Main {
 
     public static void main(String[] args) {
-        InterfaceGreeting greeting = new InterfaceGreeting() {
-            @Override
-            public String getGreeting(String name) {
-                return "son";
-            }
-        };
+        InterfaceGreeting greeting = name -> "son " + name;
+
+
+        System.out.println(greeting.getGreeting("a"));
 
         InterfaceGreeting testGreeting = (String name) -> {
             return "Hi" + name;
