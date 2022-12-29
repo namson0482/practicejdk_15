@@ -21,7 +21,7 @@ public class ShortestPalindromic {
     public String shortestPalindrome(String s) {
         int n = s.length();
         char[] str = s.toCharArray();
-        for (int i = n - 1; i >= 0; i--) {
+        for (int i = n/2 ; i >= 0; i--) {
             if (isPalindrome(str, 0, i)) {
                 int min = n - i - 1;
                 String temp = "";
@@ -36,7 +36,7 @@ public class ShortestPalindromic {
 
     // Driver Code
     public static final void main(String[] args) {
-        String input = "abcd";
+        String input = "abcda";
 
         System.out.println(new ShortestPalindromic().shortestPalindrome(input));
 
