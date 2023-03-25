@@ -238,6 +238,7 @@ public class MatrixFindPath {
         // mxn(2x3) 2d hash matrix
         for (int k = 0; k < vec.size(); k++) {
             for (int h = 0; h < vec.get(0).size(); h++) {
+
                 Vector<Vector<Integer>> hash = new Vector<Vector<Integer>>();
                 for (int i = 0; i < vec.size(); i++) {
                     hash.add(new Vector<Integer>());

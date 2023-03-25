@@ -79,11 +79,7 @@ class MatrixBackTrackSolution {
 
         int curPathProduct = pathProduct * matrix[cr][cc];
         int curZeroCnt = countZero(curPathProduct);
-//        if (curZeroCnt == 5) {
-//            System.out.print(curPathProduct);
-//            paths.forEach(e -> System.out.print(e + " "));
-//            System.out.println("end one case");
-//        }
+
         maxTrailingZeroes = Math.max(maxTrailingZeroes, curZeroCnt);
 
         if (isTurned) {
