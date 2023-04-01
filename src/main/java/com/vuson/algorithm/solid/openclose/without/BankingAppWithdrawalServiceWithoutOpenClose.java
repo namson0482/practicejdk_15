@@ -1,4 +1,4 @@
-package vu.son.algorithm.solid.openclose.without;
+package com.vuson.algorithm.solid.openclose.without;
 
 import java.util.ArrayList;
 

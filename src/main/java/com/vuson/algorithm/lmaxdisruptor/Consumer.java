@@ -1,4 +1,4 @@
-package vu.son.algorithm.lmaxdisruptor;
+package com.vuson.algorithm.lmaxdisruptor;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;

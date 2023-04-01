@@ -1,4 +1,4 @@
-package vu.son.algorithm.solid.liskov;
+package com.vuson.algorithm.liskov;
 
 public class CurrentAccountLiskovLiskov extends WithdrawableAccountLiskov {
     @Override

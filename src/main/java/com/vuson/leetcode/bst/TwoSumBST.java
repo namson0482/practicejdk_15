@@ -1,4 +1,4 @@
-package vu.son.leetcode.bst;
+package com.vuson.leetcode.bst;
 
 import java.util.HashMap;
 import java.util.LinkedList;

@@ -1,4 +1,4 @@
-package vu.son.algorithm.lmaxdisruptor;
+package com.vuson.algorithm.lmaxdisruptor;
 
 import java.util.concurrent.ThreadFactory;
 import java.io.*;

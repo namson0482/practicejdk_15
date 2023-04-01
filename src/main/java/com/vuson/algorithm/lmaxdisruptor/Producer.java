@@ -1,4 +1,4 @@
-package vu.son.algorithm.lmaxdisruptor;
+package com.vuson.algorithm.lmaxdisruptor;
 
 import com.lmax.disruptor.RingBuffer;
 

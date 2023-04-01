@@ -1,4 +1,4 @@
-package vu.son.algorithm.solid.liskov.without;
+package com.vuson.algorithm.liskov.without;
 
 import java.util.ArrayList;
 import java.util.List;

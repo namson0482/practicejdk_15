@@ -1,6 +1,6 @@
-package vu.son.algorithm.solid.liskov.without;
+package com.vuson.algorithm.liskov.without;
 
-public class SavingsAccountWithoutLiskov extends AccountWithoutLiskov{
+public class SavingsAccountWithoutLiskov extends AccountWithoutLiskov {
     @Override
     public void deposit(long money) {
         System.out.println("SavingsAccountWithoutLiskov deposit " + money);

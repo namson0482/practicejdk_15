@@ -1,4 +1,4 @@
-package vu.son.algorithm.solid.liskov.without;
+package com.vuson.algorithm.liskov.without;
 
 public abstract class AccountWithoutLiskov {
     public abstract void deposit(long money);

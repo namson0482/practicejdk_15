@@ -1,4 +1,4 @@
-package vu.son.algorithm.solid.openclose.without;
+package com.vuson.algorithm.solid.openclose.without;
 
 public class SavingAccountWithoutOpenClose {
     public void deposit(long money) {

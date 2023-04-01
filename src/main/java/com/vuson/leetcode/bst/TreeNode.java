@@ -1,4 +1,4 @@
-package vu.son.leetcode.bst;
+package com.vuson.leetcode.bst;
 
 public class TreeNode {
     int val;

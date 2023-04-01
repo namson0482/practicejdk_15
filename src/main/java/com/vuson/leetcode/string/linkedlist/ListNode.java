@@ -1,4 +1,4 @@
-package vu.son.leetcode.string.linkedlist;
+package com.vuson.leetcode.string.linkedlist;
 
 public class ListNode {
     int val;

@@ -1,4 +1,4 @@
-package vu.son.algorithm.solid.liskov.without;
+package com.vuson.algorithm.liskov.without;
 
 public class CurrentAccountWithoutLiskov extends AccountWithoutLiskov{
     @Override
