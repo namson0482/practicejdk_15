@@ -22,7 +22,6 @@ public class Potholes {
             numOfConsecutivePotHoles.add(countCurrPothole);
         }
 
-
         int budget = B;
         int countFixableHoles = 0;
         while (!numOfConsecutivePotHoles.isEmpty() && budget > 0) {

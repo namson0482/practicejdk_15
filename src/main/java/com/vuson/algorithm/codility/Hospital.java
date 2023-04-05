@@ -16,7 +16,8 @@ import java.util.Set;
  * Write a function:
  *  class Solution { public int solution(int [][]A);  }
  *
- * that, given a matrix A consisting of N rows and M columns representing the hospitals schedules, finds the number of doctors working at more than one hospital
+ * that, given a matrix A consisting of N rows and M columns representing the hospitals schedules,
+ * finds the number of doctors working at more than one hospital
  *
  * 1. Given A = [[1, 2, 2], [3, 1, 4]] the function should return 1
  *
@@ -32,40 +33,63 @@ import java.util.Set;
  */
 public class Hospital {
 
-    public static int solve(int[][] A) {
-        // each row => one hospital schedule
-        // M column => days
-        // A[K][L] => id of doc working at K hospital on L day
-        int op = 0;
-        Map<Integer, Set> docToHosp = new HashMap();
+
+    public static int solution(int[][] A) {
+        int res = 0;
+        Map<Integer, Map> hospitals = new HashMap();
         for (int i = 0; i < A.length; i++) {
             for (int j = 0; j < A[i].length; j++) {
                 int key = A[i][j];
-                Set set = docToHosp.get(key);
-                if (set == null) {
-                    Set newSet = new HashSet<>();
-                    newSet.add(i);
-                    docToHosp.put(key, newSet);
+                Map map = hospitals.get(key);
+                if (map == null) {
+                    Map newMap = new HashMap<>();
+                    newMap.put(i, i);
+                    hospitals.put(key, newMap);
                 } else {
-                    set.add(i);
-                    docToHosp.put(key, set);
+                    if(!map.containsKey(i))
+                        map.put(i, i);
                 }
             }
         }
-
-        for (Map.Entry<Integer, Set> entry : docToHosp.entrySet()) {
+        for (Map.Entry<Integer, Map> entry : hospitals.entrySet()) {
             if (entry.getValue().size() > 1) {
-                op++;
+                res++;
             }
         }
         // number of doctors working at more than one hospital!
-        return op;
+        return res;
+    }
+
+    public static int solve(int[][] A) {
+        int res = 0;
+        Map<Integer, Set> hospitals = new HashMap();
+        for (int i = 0; i < A.length; i++) {
+            for (int j = 0; j < A[i].length; j++) {
+                int key = A[i][j];
+                Set set = hospitals.get(key);
+                if (set == null) {
+                    Set newSet = new HashSet<>();
+                    newSet.add(i);
+                    hospitals.put(key, newSet);
+                } else {
+                    set.add(i);
+                    hospitals.put(key, set);
+                }
+            }
+        }
+        for (Map.Entry<Integer, Set> entry : hospitals.entrySet()) {
+            if (entry.getValue().size() > 1) {
+                res++;
+            }
+        }
+        // number of doctors working at more than one hospital!
+        return res;
     }
 
     public static void main(String[] args) {
         int[][] A = {{1, 2, 2}, {3, 1, 4}};
 //        int[][] A = {{1,1,5,2,3}, {4,5,6,4,3}, {9,4,4,1,5}};
 //        int[][] A = {{4, 3}, {5, 5}, {6, 2}};
-        System.out.println(solve(A));
+        System.out.println(solution(A));
     }
 }
