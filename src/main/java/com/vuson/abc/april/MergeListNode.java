@@ -2,7 +2,9 @@ package com.vuson.abc.april;
 
 import com.vuson.leetcode.string.linkedlist.ListNode;
 
+
 public class MergeListNode {
+
 
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         if (list1 == null) return list2;
@@ -14,6 +16,7 @@ public class MergeListNode {
             list2.next = mergeTwoLists(list1, list2.next);
             return list2;
         }
+
     }
 
 

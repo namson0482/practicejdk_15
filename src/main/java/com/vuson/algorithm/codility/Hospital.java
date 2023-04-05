@@ -66,15 +66,7 @@ public class Hospital {
         for (int i = 0; i < A.length; i++) {
             for (int j = 0; j < A[i].length; j++) {
                 int key = A[i][j];
-                Set set = hospitals.get(key);
-                if (set == null) {
-                    Set newSet = new HashSet<>();
-                    newSet.add(i);
-                    hospitals.put(key, newSet);
-                } else {
-                    set.add(i);
-                    hospitals.put(key, set);
-                }
+                hospitals.computeIfAbsent(key, v -> new HashSet<>()).add(i);
             }
         }
         for (Map.Entry<Integer, Set> entry : hospitals.entrySet()) {
@@ -88,8 +80,7 @@ public class Hospital {
 
     public static void main(String[] args) {
         int[][] A = {{1, 2, 2}, {3, 1, 4}};
-//        int[][] A = {{1,1,5,2,3}, {4,5,6,4,3}, {9,4,4,1,5}};
-//        int[][] A = {{4, 3}, {5, 5}, {6, 2}};
+
         System.out.println(solution(A));
     }
 }

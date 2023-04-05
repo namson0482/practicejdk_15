@@ -34,25 +34,8 @@ public class CountAndSay {
             return "1";
         }
         String sTemp = countAndSay(n - 1);
-        String ans = proceed(sTemp);
+        String ans = helper(sTemp);
         return ans;
-    }
-
-    public static String proceed(String str) {
-        String res = "";
-        for(int i=str.length()-1;i>=0;i--) {
-            int count = 1;
-            while(i>0) {
-                if(str.charAt(i-1) == str.charAt(i)) {
-                    count++;
-                    i--;
-                } else {
-                    break;
-                }
-            }
-            res = String.valueOf(count) + str.charAt(i) + res;
-        }
-        return res;
     }
 
     private static String helper(String str) {
@@ -64,11 +47,9 @@ public class CountAndSay {
                     i--;
                     count++;
                 } else {
-                    System.out.println("Vu Nam Son");
                     break;
                 }
             }
-
             ans = Integer.toString(count) + str.charAt(i) + ans;
         }
         return ans;
@@ -76,7 +57,7 @@ public class CountAndSay {
 
     public static void main(String[] args) {
         CountAndSay count = new CountAndSay();
-        String value = count.countAndSay(4);
+        String value = count.countAndSay(3);
         System.out.println(value);
 
 
