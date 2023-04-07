@@ -74,7 +74,6 @@ public class Hospital {
                 res++;
             }
         }
-        // number of doctors working at more than one hospital!
         return res;
     }
 
