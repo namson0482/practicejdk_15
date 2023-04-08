@@ -1,6 +1,6 @@
 package com.vuson.abc.april;
 
-public class PlusNumber {
+public class PlusBigNumber {
     private static String addDelimiter(String original, String separator) {
         String result = "";
         int k = 0;
