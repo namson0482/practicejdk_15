@@ -1,21 +1,6 @@
-package com.vuson.algorithm.basic;
+package com.vuson.abc.april;
 
-public class AddDelimiter {
-
-    private static String addDelimiter(String original, String separator) {
-        String result = "";
-        int k = 0;
-        for (int i = original.length(); i > 0; i--) {
-            result = original.charAt(i - 1) + result;
-            k++;
-            if (k % 3 == 0 && i > 1) {
-                result = separator + result;
-                k = 0;
-            }
-        }
-        return result;
-    }
-
+public class PlusNumber {
     public static String addTwoNumbers(final String num1, final String num2) {
         StringBuilder sb = new StringBuilder();
         int carry = 0;
@@ -47,11 +32,5 @@ public class AddDelimiter {
             sb.insert(0, carry);
         }
         return sb.toString();
-    }
-    public static void main(String[] args) {
-        String result = "1234";
-        String temp =  addTwoNumbers("123324324", "26238432");
-        System.out.println(temp);
-
     }
 }
