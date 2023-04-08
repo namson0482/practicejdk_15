@@ -1,6 +1,20 @@
 package com.vuson.abc.april;
 
-public class PlusNumber {
+public class PlusBigNumber {
+    private static String addDelimiter(String original, String separator) {
+        String result = "";
+        int k = 0;
+        for (int i = original.length(); i > 0; i--) {
+            result = original.charAt(i - 1) + result;
+            k++;
+            if (k % 3 == 0 && i > 1) {
+                result = separator + result;
+                k = 0;
+            }
+        }
+        return result;
+    }
+
     public static String addTwoNumbers(final String num1, final String num2) {
         StringBuilder sb = new StringBuilder();
         int carry = 0;
