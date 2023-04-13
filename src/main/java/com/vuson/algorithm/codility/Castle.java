@@ -49,17 +49,34 @@ public class Castle {
         return length;
     }
 
+    private int calculate(int[] nums, int index, boolean isUp) {
+        int maxcount = 0;
+        for (int i = index + 1; i < nums.length; i++) {
+            if ((isUp && nums[i] > nums[index]) || (!isUp && nums[i] < nums[index]))
+                maxcount = Math.max(maxcount, 1 + calculate(nums, i, !isUp));
+        }
+        return maxcount;
+    }
+
+    public int wiggleMaxLength3(int[] nums) {
+        if (nums.length < 2)
+            return nums.length;
+        return 1 + Math.max(calculate(nums, 0, true), calculate(nums, 0, false));
+    }
+
+
     public static void main(String[] args) {
 //        int[] array = {2, 2, 3, 4, 3, 3, 3, 2, 1, 1, 2, 5};
-        int[] array = {2, 2, 3, 4, 4};
+//        int[] array = {2, 2, 3, 4, 4};
+        int[] array = {1,7,4,9,2,5};
         Castle c = new Castle();
-        int res = c.wiggleMaxLength(array);
+        int res = c.wiggleMaxLength1(array);
         System.out.println(res);
     }
 
     public int wiggleMaxLength2(int[] nums) {
 
-        if( nums.length == 0 ) return 0;
+        if (nums.length == 0) return 0;
 
         int[] up = new int[nums.length];
         int[] down = new int[nums.length];
@@ -67,58 +84,59 @@ public class Castle {
         up[0] = 1;
         down[0] = 1;
 
-        for(int i = 1 ; i < nums.length; i++){
-            if( nums[i] > nums[i-1] ){
-                up[i] = down[i-1]+1;
-                down[i] = down[i-1];
-            }else if( nums[i] < nums[i-1]){
-                down[i] = up[i-1]+1;
-                up[i] = up[i-1];
-            }else{
-                down[i] = down[i-1];
-                up[i] = up[i-1];
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] > nums[i - 1]) {
+                up[i] = down[i - 1] + 1;
+                down[i] = down[i - 1];
+            } else if (nums[i] < nums[i - 1]) {
+                down[i] = up[i - 1] + 1;
+                up[i] = up[i - 1];
+            } else {
+                down[i] = down[i - 1];
+                up[i] = up[i - 1];
             }
         }
 
-        return Math.max(down[nums.length-1],up[nums.length-1]);
+        return Math.max(down[nums.length - 1], up[nums.length - 1]);
     }
 
 
     public int wiggleMaxLength1(int[] nums) {
-        if (nums == null || nums.length == 0)
+        if (nums == null)
             return 0;
-        if (nums.length == 1)
-            return 1;
-        int count = 1;
-        int i = 0, j = i + 1;
+        if (nums.length <= 1)
+            return nums.length;
+        int result = 1;
+        int i = 0;
+        int j = i + 1;
 
-        while (i < nums.length && j < nums.length) {
+        for (;i < nums.length && j < nums.length;) {
             if (nums[j] == nums[i]) {
                 ++i;
                 ++j;
             } else if (nums[j] > nums[i]) {
-                ++count;
+                ++result;
                 int k = j + 1;
-                while (k < nums.length && nums[k] >= nums[k - 1]) {
+                for (;k < nums.length && nums[k] >= nums[k - 1];) {
                     ++k;
                 }
                 if (k == nums.length)
-                    return count;
+                    return result;
                 i = k - 1;
                 j = k;
             } else {
-                ++count;
+                ++result;
                 int k = j + 1;
-                while (k < nums.length && nums[k] <= nums[k - 1]) {
+                for (;k < nums.length && nums[k] <= nums[k - 1];) {
                     ++k;
                 }
                 if (k == nums.length)
-                    return count;
+                    return result;
                 i = k - 1;
                 j = k;
             }
         }
-        return count;
+        return result;
     }
 
 

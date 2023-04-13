@@ -40,11 +40,48 @@ public class WordBreak {
 
 
 
+    public void wordBreakII(String input, List<String> listDict,List<List<String>> listResult, List<String> listTemp, int start) {
+        if(start == input.length()) {
+            listResult.add(new ArrayList<>(listTemp));
+        }
+        for(int end=start+1;end<input.length()+1;end++) {
+            String subString = input.substring(start, end);
+            if(listDict.contains(subString)) {
+                listTemp.add(subString);
+                wordBreakII(input, listDict, listResult, listTemp, end);
+                listTemp.remove(listTemp.size()-1);
+            }
+        }
+    }
+
+
+    public List<String>  doWordBreak(String s, List<String> wordDict) {
+        List<List<String>> result = new ArrayList<>();
+        List<String> listTemp = new ArrayList<>();
+        wordBreakII(s,wordDict,result, listTemp,0);
+
+        List<String> res = new ArrayList<>();
+
+        result.forEach(v -> {
+            String sTemp = "";
+            for(String item: v) {
+                sTemp += item + " ";
+            }
+            sTemp = sTemp.trim();
+            res.add(sTemp);
+        });
+        return res;
+    }
 
 
     public static void main(String[] args) {
-        List<String> list = Arrays.asList(new String[]{"c" , "ars"});
-        String s = "cars";
-        System.out.println(wordBreakDynamic(s, list));
+        List<String> list = Arrays.asList(new String[]{"cat","cats","and","sand","dog"});
+        String s = "catsanddog";
+//        List<String> list = Arrays.asList(new String[]{"apple","pen","applepen","pine","pineapple"});
+//        String s = "pineapplepenapple";
+        System.out.println(wordBreak(s, list));
+//        doWordBreak(s, list);
+
+
     }
 }

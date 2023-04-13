@@ -42,8 +42,7 @@ public class BackTrackPermutations {
 	}
 
 	private void backtrackUnique(List<List<Integer>> list, List<Integer> tempList, int[] nums, boolean[] used) {
-		
-		
+
 		if (tempList.size() == nums.length) {
 			list.add(new ArrayList<>(tempList));
 		} else {

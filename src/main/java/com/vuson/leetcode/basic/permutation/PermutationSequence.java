@@ -1,4 +1,4 @@
-package vu.son.leetcode.basic.permutation;
+package com.vuson.leetcode.basic.permutation;
 
 
 import lombok.extern.slf4j.Slf4j;

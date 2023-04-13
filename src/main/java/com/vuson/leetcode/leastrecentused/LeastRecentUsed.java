@@ -3,6 +3,7 @@ package vu.son.leetcode.leastrecentused;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
+import java.util.Queue;
 
 public class LeastRecentUsed {
 
@@ -45,6 +46,7 @@ public class LeastRecentUsed {
             String value = (String)iterator.next();
             System.out.print(value + " ");
         }
+
     }
 
     public static void main(String[] args) {
@@ -54,5 +56,15 @@ public class LeastRecentUsed {
         leastRecentUsed.put("3", "3");
         leastRecentUsed.put("4", "4");
         leastRecentUsed.printValues();
+
+
+//        Queue<String> str_queue = new LinkedList<>();
+//        //initialize the queue with values
+//        str_queue.add("one");
+//        str_queue.add("two");
+//        str_queue.add("three");
+//        str_queue.add("four");
+//        //print the Queue
+//        System.out.println("The Queue contents:" + str_queue.poll());
     }
 }

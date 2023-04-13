@@ -66,6 +66,10 @@ public class Apr7 {
 //        testOptional();
 
 
+//        int[] example1 = list.stream().mapToInt(i->i).toArray();
+// OR
+//        int[] example2 = list.stream().mapToInt(Integer::intValue).toArray();
+
         testMapAndFlatMap_1();
     }
 
