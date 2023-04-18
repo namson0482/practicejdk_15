@@ -1,11 +1,42 @@
 package com.vuson.abc.april;
 
+import lombok.AllArgsConstructor;
+
+import java.util.Stack;
+
 public class QuickSort {
+
+
+    @AllArgsConstructor
+    static class Point {
+        int start;
+        int end;
+    }
 
     private static void swap(int []array, int i, int j) {
         int temp = array[i];
         array[i] = array[j];
         array[j] = temp;
+
+
+
+    }
+
+    private static void quickSortNonRecursive(int []numbers) {
+        int left = 0;
+        int right = numbers.length - 1;
+        Stack<Point> stack = new Stack();
+        stack.add(new Point(left, right));
+        for(;!stack.empty();) {
+            Point point = stack.pop();
+            int pivot = partition(numbers, point.start, point.end);
+            if(pivot - 1 > point.start) {
+                stack.push(new Point(point.start, pivot-1));
+            }
+            if(pivot + 1 < point.end) {
+                stack.push(new Point(pivot + 1, point.end));
+            }
+        } while (!stack.empty());
     }
 
     private static int partition(int []array, int begin, int end) {
@@ -47,8 +78,15 @@ public class QuickSort {
     }
 
     public static void main(String[] args) {
-        int []array  = {1, 9, 7, 2, 6, 5};
-        quickSort(array, 0, array.length - 1, 0);
+//        int []array  = {1, 9, 7, 2, 6, 5};
+//        quickSortNonRecursive(array);
+//        print(array);
+        int a = 5;
+        int b = 3;
+        a = a + b;
+        b = a - b;
+        a = a - b;
 
+        System.out.println(a + " " + b);
     }
 }

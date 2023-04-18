@@ -1,46 +1,81 @@
 package com.vuson.abc.april.java8;
 
+
+import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
+import java.util.Stack;
+
+@Slf4j
 public class QuickSort {
 
-    public static void main(String[] args) {
-        int []array = new int[]{6, 5, 4, 8, 7, 9};
-        int left = 0;
-        int right = array.length - 1;
-        quickSort(array, left, right);
-        printArray(array);
+
+    @AllArgsConstructor
+    static class Pair {
+        int left;
+        int right;
     }
 
-    private static void printArray(int []array) {
-        System.out.println("");
-        for(int item: array) {
-            System.out.print(item + " ");
-        }
+    private static void swapValue(int []numbers, int i, int j) {
+        numbers[i] = numbers[i] + numbers[j];
+        numbers[j] = numbers[i] - numbers[j];
+        numbers[i] = numbers[i] - numbers[j];
     }
 
-    private static void quickSort(int []array, int left, int right) {
-        if(left < right) {
-            int partition = partition(array, left, right);
-            quickSort(array, left, partition - 1);
-            quickSort(array, partition + 1, right);
-        }
-    }
-
-    private static int partition(int []array, int left, int right) {
-        int pivot = array[right];
-        int i = left - 1;
-        for(int j=left;j<right;j++) {
-            if(array[j]<=pivot) {
+    private static int partition(int []numbers, int begin, int end) {
+        int pivot = numbers[end];
+        int i = begin - 1;
+        for(int j=begin;j<end;j++) {
+            if(numbers[j] <= pivot) {
                 i++;
-                int temp = array[i];
-                array[i] = array[j];
-                array[j] = temp;
+                swapValue(numbers, i, j);
             }
         }
-
         i++;
-        int temp = array[i];
-        array[i] = array[right];
-        array[right] = temp;
+        swapValue(numbers, i, end);
         return i;
     }
+
+    private static void quickSort(int []numbers, int left, int right) {
+
+
+        Stack<Pair> stack = new Stack();
+        Pair pair = new Pair(left, right);
+        stack.push(pair);
+        do {
+            pair = stack.pop();
+            int pivot = partition(numbers, pair.left, pair.right);
+            if (pivot - 1 > pair.left) {
+                stack.push(new Pair(pair.left, pivot - 1));
+            }
+            if(pivot + 1 < pair.right) {
+                stack.push(new Pair(pivot + 1, pair.right));
+            }
+        } while(!stack.empty());
+
+    }
+
+    private static void printArray(int []numbers) {
+        System.out.println("");
+        String stemp = "";
+
+        if(numbers.length == 1) {
+            stemp = numbers[0] + "";
+        } else {
+            for(int i=0;i<numbers.length - 1;i++) {
+                stemp += numbers[i] + " ";
+            }
+            stemp += numbers[numbers.length - 1];
+        }
+
+        log.info("Array: {}", stemp);
+    }
+
+
+    public static void main(String[] args) {
+       int []numbers = {10, 1, 24, 2, 0, 5};
+        quickSort(numbers, 0, numbers.length - 1);
+        printArray(numbers);
+    }
+
 }

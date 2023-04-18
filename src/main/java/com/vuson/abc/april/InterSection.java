@@ -1,9 +1,12 @@
 package com.vuson.abc.april;
 
+import org.apache.avro.generic.GenericData;
+
 import java.util.*;
 
 public class InterSection {
     public static int[] intersection(int[] nums1, int[] nums2) {
+
         Set<Integer> set = new HashSet<>();
         for(int item: nums1) {
             set.add(item);
@@ -17,11 +20,13 @@ public class InterSection {
         }
         return result.stream().mapToInt(q->q).toArray();
 
+
+
     }
 
     public static void main(String[] args) {
-        int[] nums1 = {1, 2, 2, 1};
-        int[] nums2 = {2, 2};
+        int[] nums1 = {4,9,5};
+        int[] nums2 = {9,4,9,8,4};
 
         int[] res = intersection(nums1, nums2);
         System.out.println("");

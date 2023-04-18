@@ -1,9 +1,11 @@
-package vu.son.algorithm.string;
+package com.vuson.algorithm.string;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class LongestSubString {
+
+
     static String getLongestSubString(String input) {
         int start = 0;
         int st = 0;

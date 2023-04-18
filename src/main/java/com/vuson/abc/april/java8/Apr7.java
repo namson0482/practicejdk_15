@@ -3,9 +3,11 @@ package com.vuson.abc.april.java8;
 import com.vuson.abc.april.Person;
 import lombok.extern.slf4j.Slf4j;
 
+import java.math.BigDecimal;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import static java.util.Collections.emptyList;
 import static org.junit.Assert.assertEquals;
 
 
@@ -70,6 +72,12 @@ public class Apr7 {
 // OR
 //        int[] example2 = list.stream().mapToInt(Integer::intValue).toArray();
 
+//        int[] input = new int[]{1,2,3,4};
+//        List<Integer> output = Arrays.stream(input).boxed().collect(Collectors.toList());
+
+//        int[] input = new int[]{1,2,3,4};
+//        List<Integer> output = IntStream.of(input).boxed().collect(Collectors.toList());
+
         testMapAndFlatMap_1();
     }
 
@@ -125,6 +133,61 @@ public class Apr7 {
         Optional<Optional<String>> optionNested = Optional.of(optionalValue);
         Optional<Integer> optionInt_1 = optionNested.flatMap(q -> q).map(String::length);
 
+    }
+
+
+    private static List<String> getList() {
+        return null;
+    }
+
+    private static Optional<List<String>> getList2() {
+        return Optional.ofNullable(new ArrayList<>());
+    }
+
+    private static List run() {
+        log.info("Alo");
+        return new ArrayList();
+    }
+
+    private static void testOrElseGet() {
+        // Pre java 8
+        List<String> list = getList();
+        List<String> listOpt = list != null ? list : new ArrayList<>();
+
+        // Java 8
+        List<String> listOpt2 = getList2().orElse(run());
+        List<String> listOpt3 = getList2().orElseGet(() -> run());
+    }
+
+
+    private static final String MOST_EVIL_PRICE_PLAN_ID = "price-plan-0";
+    private static final String RENEWABLES_PRICE_PLAN_ID = "price-plan-1";
+    private static final String STANDARD_PRICE_PLAN_ID = "price-plan-2";
+    public List<PricePlan> pricePlans() {
+        final List<PricePlan> pricePlans = new ArrayList<>();
+        pricePlans.add(new PricePlan(MOST_EVIL_PRICE_PLAN_ID, "Dr Evil's Dark Energy", BigDecimal.TEN, emptyList()));
+        pricePlans.add(new PricePlan(RENEWABLES_PRICE_PLAN_ID, "The Green Eco", BigDecimal.valueOf(2), emptyList()));
+        pricePlans.add(new PricePlan(STANDARD_PRICE_PLAN_ID, "Power for Everyone", BigDecimal.ONE, emptyList()));
+        return pricePlans;
+    }
+
+    public Map<String, List<ElectricityReading>> perMeterElectricityReadings() {
+        final Map<String, List<ElectricityReading>> readings = new HashMap<>();
+        final ElectricityReadingsGenerator electricityReadingsGenerator = new ElectricityReadingsGenerator();
+        smartMeterToPricePlanAccounts()
+                .keySet()
+                .forEach(smartMeterId -> readings.put(smartMeterId, electricityReadingsGenerator.generate(2)));
+        return readings;
+    }
+
+    public Map<String, String> smartMeterToPricePlanAccounts() {
+        final Map<String, String> smartMeterToPricePlanAccounts = new HashMap<>();
+        smartMeterToPricePlanAccounts.put("smart-meter-0", MOST_EVIL_PRICE_PLAN_ID);
+        smartMeterToPricePlanAccounts.put("smart-meter-1", RENEWABLES_PRICE_PLAN_ID);
+        smartMeterToPricePlanAccounts.put("smart-meter-2", MOST_EVIL_PRICE_PLAN_ID);
+        smartMeterToPricePlanAccounts.put("smart-meter-3", STANDARD_PRICE_PLAN_ID);
+        smartMeterToPricePlanAccounts.put("smart-meter-4", RENEWABLES_PRICE_PLAN_ID);
+        return smartMeterToPricePlanAccounts;
     }
 
 }

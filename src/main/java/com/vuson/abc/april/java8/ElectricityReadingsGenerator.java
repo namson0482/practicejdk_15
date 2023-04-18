@@ -21,7 +21,6 @@ public class ElectricityReadingsGenerator {
             ElectricityReading electricityReading = new ElectricityReading(now.minusSeconds(i * 10), randomReading);
             readings.add(electricityReading);
         }
-
         readings.sort(Comparator.comparing(ElectricityReading::getTime));
         return readings;
     }

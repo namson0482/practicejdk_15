@@ -63,5 +63,14 @@ public class QuickSortNon {
         linkedList.add("son");
         linkedList.add("vu");
         System.out.println(linkedList.pop());
+
+
+        int []numbers = {9, 8, 0, 1, 2, 4};
+        QuickSortNon quickSortNon = new QuickSortNon();
+        quickSortNon.quickSort(numbers);
+        System.out.println("");
+        for(int item: numbers) {
+            System.out.print(item + " ");
+        }
     }
 }
