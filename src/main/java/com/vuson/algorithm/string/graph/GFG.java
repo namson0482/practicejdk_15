@@ -1,4 +1,4 @@
-package vu.son.algorithm.string.graph;
+package com.vuson.algorithm.string.graph;
 
 // Java implementation of the approach
 
@@ -7,7 +7,7 @@ import java.util.*;
 // Class to represent the graph
 class Graph {
 
-    private List<GraphNode> nodes;
+    private final List<GraphNode> nodes;
 
     // Constructor to create an empty ArrayList
     // to store the nodes of the graph
@@ -37,7 +37,7 @@ class Graph {
 class GraphNode {
 
     private int data;
-    private List<GraphNode> children;
+    private final List<GraphNode> children;
 
     // Constructor to initialize the node with value
     public GraphNode(int data) {

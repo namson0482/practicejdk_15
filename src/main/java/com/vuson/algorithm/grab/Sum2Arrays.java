@@ -54,9 +54,7 @@ public class Sum2Arrays {
 		if (memory != 0) {
 			finalResult = new String[loop + 1];
 			finalResult[0] = memory + "";
-			for (int i = 0; i < tempResult.length; i++) {
-				finalResult[i + 1] = tempResult[i];
-			}
+            System.arraycopy(tempResult, 0, finalResult, 1, tempResult.length);
 		}
 
 		String result = "";

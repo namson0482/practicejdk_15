@@ -1,4 +1,4 @@
-package vu.son.leetcode.string;
+package com.vuson.leetcode.string;
 
 import java.util.*;
 
@@ -24,9 +24,7 @@ public class StringSplit {
         String prefix = elements[0];
 
         PriorityQueue<String> queue = new PriorityQueue<>();
-        for (int i= 1; i < elements.length; i++) {
-            queue.add(elements[i]);
-        }
+        queue.addAll(Arrays.asList(elements).subList(1, elements.length));
         StringBuilder sb = new StringBuilder();
         while(!queue.isEmpty()) {
             sb.append(queue.poll());

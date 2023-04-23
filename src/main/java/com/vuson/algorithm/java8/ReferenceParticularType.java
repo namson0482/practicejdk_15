@@ -31,11 +31,11 @@ public class ReferenceParticularType {
 		list.add("Son");
 		list.add("Nam");
 		list.add("     ");
-		long count = list.stream().filter(x -> x.isEmpty() == true).count();
+		long count = list.stream().filter(x -> x.isEmpty()).count();
 		Consumer<Long> consumer = x -> System.out.println(x);
 		consumer.accept(count);
 		
-		Stream<User> steamUser = list.stream().filter(x -> x.isBlank() == false).map(User::new);
+		Stream<User> steamUser = list.stream().filter(x -> !x.isBlank()).map(User::new);
 		List<User> lstUser = steamUser.collect(Collectors.toList());
 		lstUser.forEach(user -> System.out.println(user.getUserName()));
 	}

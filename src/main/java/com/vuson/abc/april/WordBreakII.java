@@ -43,7 +43,7 @@ public class WordBreakII {
 
         List<String> listResult = new ArrayList<>();
         for(Map.Entry<String, Node> item : map.entrySet()) {
-            System.out.println("");
+            System.out.println();
             Node node = item.getValue();
             int tempEnd = node.getEnd();
             System.out.println(node.getValue() + " ");
@@ -136,7 +136,7 @@ public class WordBreakII {
 
 
     public static void main(String[] args) {
-        List<String> list = Arrays.asList(new String[]{"cat","cats","and","sand","dog"});
+        List<String> list = Arrays.asList("cat","cats","and","sand","dog");
         String s = "catsanddog";
         System.out.println(new WordBreakII().wordBreakTemp(s, list));
 //        doWordBreak(s, list);

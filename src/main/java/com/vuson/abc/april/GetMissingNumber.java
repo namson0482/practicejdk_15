@@ -19,7 +19,7 @@ public class GetMissingNumber {
                     break;
                 }
             }
-            if(find == false) {
+            if(!find) {
                 return i;
             }
         }

@@ -16,8 +16,8 @@ public class BackTrackCombination {
 	}
 
 	private void backtrack(List<List<Integer>> list, List<Integer> tempList, int[] nums, int remain, int start) {
-		if (remain < 0)
-			return;
+		if (remain < 0) {
+        }
 		else if (remain == 0)
 			list.add(new ArrayList<>(tempList));
 		else {

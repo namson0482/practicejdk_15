@@ -49,13 +49,13 @@ public class ThrowTheBall {
 //        Integer array[] = new Integer[]{6, 5, 2, 5, 3, 2};
 //        long seconds = 7; //3
 
-        Integer array[] = new Integer[]{2, 4, 1, 5, 3};
+        Integer[] array = new Integer[]{2, 4, 1, 5, 3};
         long seconds = 6;  //2
 
         List<Integer> receiver = Arrays.asList(array);
 
         ThrowTheBall throwTemp = new ThrowTheBall();
-        int result = throwTemp.throwTheBall(receiver, seconds);
+        int result = throwTheBall(receiver, seconds);
         System.out.print("Value: ");
         System.out.println(result);
     }

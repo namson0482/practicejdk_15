@@ -10,6 +10,6 @@ public interface ThirdInterface {
     default boolean isNull(String string) {
         System.out.println("Interface Null Check");
 
-        return string == null ? true : "".equals(string) ? true : false;
+        return string == null || "".equals(string);
     }
 }

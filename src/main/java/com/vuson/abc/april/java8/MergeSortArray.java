@@ -33,7 +33,7 @@ public class MergeSortArray {
     }
 
     private static void printArray(int[] array) {
-        System.out.println("");
+        System.out.println();
         for (int item : array) {
             System.out.print(item + " ");
         }

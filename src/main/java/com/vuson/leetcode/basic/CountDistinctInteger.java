@@ -40,7 +40,7 @@ public class CountDistinctInteger {
             n /= 10;
         }
         if(negative) {
-            result = 0 - result;
+            result = -result;
         }
         return result;
     }
@@ -67,7 +67,7 @@ public class CountDistinctInteger {
             tempNums[i++] = entry.getValue();
             System.out.print(entry.getValue() + "  ");
         }
-        System.out.println("");
+        System.out.println();
         return map.size();
     }
 

@@ -32,12 +32,12 @@ public class Permutation {
 
     HashSet <List<Integer>> set = new HashSet<>();
     public List<List<Integer>> permuteUniqueIII(int[] nums) {
-        boolean used[] = new boolean[nums.length];
+        boolean[] used = new boolean[nums.length];
         permute(new ArrayList<Integer>(),nums, used);
         return new ArrayList(set);
     }
 
-    public void permute(List<Integer> permutation, int []nums,  boolean used[]){
+    public void permute(List<Integer> permutation, int []nums, boolean[] used){
 
         if(permutation.size() == nums.length){
             set.add(new ArrayList<Integer>(permutation));

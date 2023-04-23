@@ -1,4 +1,4 @@
-package vu.son.leetcode.array;
+package com.vuson.leetcode.array;
 
 
 /**
@@ -10,7 +10,7 @@ public class SubArray {
     public int[] indexMaxSubArray(int []nums) {
         int currentSubarray = nums[0];
         int maxSubarray = nums[0];
-        int indices[] = new int[] {0, 0};
+        int[] indices = new int[] {0, 0};
         for (int i = 1; i < nums.length; i++) {
             int num = nums[i];
             currentSubarray = Math.max(num, currentSubarray + num);
@@ -46,7 +46,7 @@ public class SubArray {
         for (int i = 0; i < indices.length; i++) {
             System.out.print(indices[i] + "  ");
         }
-        System.out.println("");
+        System.out.println();
         System.out.println("Max Sum Sub Array: " + subArray.maxSubArray(nums));
 
     }

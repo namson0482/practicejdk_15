@@ -1,10 +1,10 @@
-package vu.son.algorithm.string;
+package com.vuson.algorithm.string;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * vu.son.string.WordBreak algorithm
+ * com.vuson.string.WordBreak algorithm
  */
 public class WordBreak {
 
@@ -20,7 +20,7 @@ public class WordBreak {
 	}
 
 	public boolean wordbreak(String words, List<String> dict) {
-		boolean mat[][] = new boolean[words.length()][words.length()];
+		boolean[][] mat = new boolean[words.length()][words.length()];
 
 		// initialize matrix
 		for (int i = 0; i < words.length(); i++)
@@ -34,7 +34,7 @@ public class WordBreak {
 					continue;
 				}
 				for (int k = i; k < j; k++) {
-					if (mat[i][k] == true && mat[k + 1][j] == true) {
+					if (mat[i][k] && mat[k + 1][j]) {
 						mat[i][j] = true;
 						continue;
 					}

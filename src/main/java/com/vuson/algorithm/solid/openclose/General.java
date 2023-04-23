@@ -1,10 +1,10 @@
-package vu.son.algorithm.solid.openclose;
+package com.vuson.algorithm.solid.openclose;
 
 public interface General {
 
-    public void setName() ;
+    void setName() ;
 
-    public void getName()  ;
+    void getName()  ;
 
-    public void doCalculateSalary();
+    void doCalculateSalary();
 }

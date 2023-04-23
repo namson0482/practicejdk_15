@@ -1,4 +1,4 @@
-package vu.son.leetcode.backtrack;
+package com.vuson.leetcode.backtrack;
 
 import java.util.ArrayList;
 import java.util.Arrays;

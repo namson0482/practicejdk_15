@@ -27,7 +27,7 @@ public class QuickSort {
         int right = numbers.length - 1;
         Stack<Point> stack = new Stack();
         stack.add(new Point(left, right));
-        for(;!stack.empty();) {
+        while (!stack.empty()) {
             Point point = stack.pop();
             int pivot = partition(numbers, point.start, point.end);
             if(pivot - 1 > point.start) {
@@ -36,7 +36,8 @@ public class QuickSort {
             if(pivot + 1 < point.end) {
                 stack.push(new Point(pivot + 1, point.end));
             }
-        } while (!stack.empty());
+        }
+        while (!stack.empty());
     }
 
     private static int partition(int []array, int begin, int end) {
@@ -70,7 +71,7 @@ public class QuickSort {
     }
 
     private static void print(int []array) {
-        System.out.println("");
+        System.out.println();
         System.out.print("Array is: ");
         for(int item: array) {
             System.out.print(item + " ");

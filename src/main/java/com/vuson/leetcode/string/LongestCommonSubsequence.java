@@ -1,4 +1,4 @@
-package vu.son.leetcode.string;
+package com.vuson.leetcode.string;
 
 /**
  * https://www.programiz.com/dsa/longest-common-subsequence

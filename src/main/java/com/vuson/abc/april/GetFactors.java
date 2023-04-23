@@ -7,7 +7,7 @@ public class GetFactors {
     public List<List<Integer>> getFactors(int n) {
         final List<List<Integer>> ans = new LinkedList<>();
         final Stack<LinkedList<Integer>> stack = new Stack<>();
-        stack.push(new LinkedList<>(new LinkedList<>(Arrays.asList(n))));
+        stack.push(new LinkedList<>(new LinkedList<>(List.of(n))));
         while (!stack.isEmpty()) {
             final LinkedList<Integer> factors = stack.pop();
             final int lastFactor = factors.removeLast();

@@ -1,4 +1,4 @@
-package vu.son.leetcode.matrix;
+package com.vuson.leetcode.matrix;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -51,7 +51,7 @@ public class SetMatrixZeroes {
     }
 
 
-    public  void zero(int matrix[][],int n,int m,int row,int col){
+    public  void zero(int[][] matrix, int n, int m, int row, int col){
         for(int i=0;i<n;i++){
             matrix[i][col]=0;
         }
@@ -59,7 +59,7 @@ public class SetMatrixZeroes {
             matrix[row][i]=0;
         }
     }
-    public void setZeroes(int matrix[][]) {
+    public void setZeroes(int[][] matrix) {
         // Write your code here..
         ArrayList<ArrayList<Integer>> arr=new ArrayList<>();
         int n=matrix.length;
@@ -111,14 +111,14 @@ public class SetMatrixZeroes {
         SetMatrixZeroes setMatrixZeroes = new SetMatrixZeroes();
         setMatrixZeroes.setZeroes(matrix);
         for (int i = 0; i < matrix.length; i++) {
-            System.out.println("");
+            System.out.println();
             for (int j = 0; j < matrix[0].length; j++) {
                 System.out.print(matrix[i][j] + "    ");
             }
         }
         long finish = System.currentTimeMillis();
 
-        System.out.println("");
+        System.out.println();
         log.info("Time elapsed: {}ms", finish - start);
 
     }

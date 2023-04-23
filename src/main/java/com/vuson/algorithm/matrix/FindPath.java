@@ -1,4 +1,4 @@
-package vu.son.algorithm.matrix;
+package com.vuson.algorithm.matrix;
 
 import java.util.Stack;
 

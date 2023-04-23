@@ -1,4 +1,4 @@
-package vu.son.algorithm.string;
+package com.vuson.algorithm.string;
 
 // Java code to demonstrate remove
 // case in Fail-fast iterators

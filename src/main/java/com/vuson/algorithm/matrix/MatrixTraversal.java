@@ -1,4 +1,4 @@
-package vu.son.algorithm.matrix;
+package com.vuson.algorithm.matrix;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,7 +43,7 @@ class Path {
 public class MatrixTraversal {
 
 
-    private static void printMatrix(int mat[][], int m, int n,
+    private static void printMatrix(int[][] mat, int m, int n,
                                     int i, int j, List<Integer> list, Path path) {
 
         //return if i or j crosses matrix size
@@ -68,7 +68,7 @@ public class MatrixTraversal {
 
 //        int mat[][] = {{1, 2, 3},
 //                       {4, 5, 6}};
-        int mat[][] =
+        int[][] mat =
        {{5, 8,  3,  1},
         {4, 15, 12, 1},
         {6, 7,  10, 1},

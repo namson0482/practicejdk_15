@@ -16,7 +16,7 @@ public class Apr7 {
 
 
     private static void testArray() {
-        List<String> list = Arrays.asList(new String[]{"son", "hai"});
+        List<String> list = Arrays.asList("son", "hai");
         String[] items = list.stream().toArray(String[]::new);
         List result = list.stream().filter(value -> !value.equals("son")).collect(Collectors.toList());
     }
@@ -41,7 +41,7 @@ public class Apr7 {
         return null;
     }
 
-    static List<String> names = new ArrayList<>(Arrays.asList(new String[]{"1", "2", "3", "4", "5"}));
+    static List<String> names = new ArrayList<>(Arrays.asList("1", "2", "3", "4", "5"));
 
     public static String getRandomName() {
         log.info("getRandomName() method - start");
@@ -81,6 +81,13 @@ public class Apr7 {
         testMapAndFlatMap_1();
     }
 
+    private static void testConversionArray() {
+        String []arr = {"A", "", "B"};
+        String []values  =  Arrays.stream(arr).filter(v->v.length()>0)
+                .map(v->v.charAt(0) + "")
+                .toArray(String[]::new);
+    }
+
     /**
      * map and flatMap
      */
@@ -106,7 +113,7 @@ public class Apr7 {
 
     static void testMapAndFlatMap_2() {
 //        List<String> list = Stream.of("1", "2").map(String::toUpperCase).collect(Collectors.toList());
-        List<List<String>> list = Arrays.asList(Arrays.asList("a"), Arrays.asList("b"));
+        List<List<String>> list = Arrays.asList(List.of("a"), List.of("b"));
         System.out.println(list);
         System.out.println(list.stream().flatMap(Collection::stream).collect(Collectors.toList()));
 

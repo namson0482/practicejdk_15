@@ -56,7 +56,7 @@ public class QuickSort {
     }
 
     private static void printArray(int []numbers) {
-        System.out.println("");
+        System.out.println();
         String stemp = "";
 
         if(numbers.length == 1) {

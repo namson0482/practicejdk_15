@@ -73,7 +73,7 @@ public class CanPartition {
 
     public static void main(String[] args) {
 //        int nums [] = {1, 5, 12, 6};
-        int nums [] = {1, 2, 5};
+        int[] nums = {1, 2, 5};
 
         log.info(new CanPartition().canPartition(nums) + "");
     }

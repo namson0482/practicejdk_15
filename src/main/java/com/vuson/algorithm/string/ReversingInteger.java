@@ -1,4 +1,4 @@
-package vu.son.algorithm.string;
+package com.vuson.algorithm.string;
 
 public class ReversingInteger {
 

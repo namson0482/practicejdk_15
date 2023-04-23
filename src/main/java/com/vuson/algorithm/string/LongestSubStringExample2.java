@@ -1,4 +1,4 @@
-package vu.son.algorithm.string;
+package com.vuson.algorithm.string;
 
 public class LongestSubStringExample2 {
     public static Boolean areDistinct(String str,
@@ -8,7 +8,7 @@ public class LongestSubStringExample2 {
         boolean[] visited = new boolean[26];
 
         for (int k = i; k <= j; k++) {
-            if (visited[str.charAt(k) - 'a'] == true)
+            if (visited[str.charAt(k) - 'a'])
                 return false;
 
             visited[str.charAt(k) - 'a'] = true;

@@ -8,7 +8,7 @@ import java.util.Set;
 
 class NQueen {
     private int size;
-    private List<List<String>> solutions = new ArrayList<List<String>>();
+    private final List<List<String>> solutions = new ArrayList<List<String>>();
 
     /**
      * Get all distinct N-Queen solutions
@@ -18,7 +18,7 @@ class NQueen {
      */
     public List<List<String>> solveNQueens(int n) {
         size = n;
-        char emptyBoard[][] = new char[size][size];
+        char[][] emptyBoard = new char[size][size];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 emptyBoard[i][j] = '.';

@@ -38,9 +38,7 @@ public class WizeLine {
 		if(memory != 0) {
 			int []result_1 = new int[maxLength + 1]	;
 			result_1[0] = memory;
-			for(int i=0;i<result.length;i++) {
-				result_1[i+1] = result[i];
-			}
+            System.arraycopy(result, 0, result_1, 1, result.length);
 			return result_1;
 		}
 		return result;
@@ -63,7 +61,7 @@ public class WizeLine {
 	    BigInteger tempValue2 = new BigInteger(temp2);
 	    BigInteger tempValue3 = tempValue1.add(tempValue2);
 	    
-	    String temp3 = tempValue3.toString() + "";
+	    String temp3 = tempValue3 + "";
 	    String []arrayTemp = temp3.split("");
 	    int []result =  new int[arrayTemp.length];
 	    for(int i =0;i<arrayTemp.length;i++) {
@@ -86,7 +84,7 @@ public class WizeLine {
 		}
 		
 		//
-		System.out.println("");
+		System.out.println();
 		System.out.println(a.length);
 		System.out.print(result.length);
 	}

@@ -1,4 +1,4 @@
-package vu.son.algorithm.matrix;
+package com.vuson.algorithm.matrix;
 
 // Java program to multiply two numbers
 // represented as Strings.
@@ -13,7 +13,7 @@ public class ProductTwoNumber {
 
         // will keep the result number in vector
         // in reverse order
-        int result[] = new int[len1 + len2];
+        int[] result = new int[len1 + len2];
 
         // Below two indexes are used to
         // find positions in result.

@@ -1,4 +1,4 @@
-package vu.son.leetcode.matrix;
+package com.vuson.leetcode.matrix;
 
 import java.util.ArrayList;
 import java.util.List;

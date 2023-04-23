@@ -1,7 +1,10 @@
 package com.vuson.abc.april;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.*;
 
+@Slf4j
 public class WordBreak {
 
     public static boolean wordBreak(String word, List<String> listWord) {
@@ -75,11 +78,11 @@ public class WordBreak {
 
 
     public static void main(String[] args) {
-        List<String> list = Arrays.asList(new String[]{"cat","cats","and","sand","dog"});
+        List<String> list = Arrays.asList("cat","cats","and","sand","dog");
         String s = "catsanddog";
 //        List<String> list = Arrays.asList(new String[]{"apple","pen","applepen","pine","pineapple"});
 //        String s = "pineapplepenapple";
-        System.out.println(wordBreak(s, list));
+        System.out.println(wordBreakDynamic(s, list));
 //        doWordBreak(s, list);
 
 

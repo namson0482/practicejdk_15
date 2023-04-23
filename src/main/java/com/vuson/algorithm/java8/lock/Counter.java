@@ -7,7 +7,7 @@ public class Counter implements Runnable {
 
     private static final Integer MAX_T =2;
 
-    private Lock lock = new Lock();
+    private final Lock lock = new Lock();
 
     private static int count = 0;
 

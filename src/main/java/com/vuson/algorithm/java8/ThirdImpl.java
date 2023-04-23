@@ -8,7 +8,7 @@ public class ThirdImpl implements ThirdInterface {
 //        return string == null ? true : false;
 //    }
 
-    public static void main(String args[]){
+    public static void main(String[] args){
         ThirdImpl obj = new ThirdImpl();
         obj.print("");
         obj.isNull("abc");

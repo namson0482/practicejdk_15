@@ -1,4 +1,4 @@
-package vu.son.algorithm.queue;
+package com.vuson.algorithm.queue;
 
 import java.util.Deque;
 import java.util.Iterator;
@@ -16,7 +16,7 @@ public class JavaQueue {
     }
 
     public void fifo() {
-        System.out.println("");
+        System.out.println();
         queue.add("4");
         queue.add("5");
         queue.add("6");
@@ -24,7 +24,7 @@ public class JavaQueue {
             System.out.print(queue.poll() + " ");
         }
 
-        System.out.println("");
+        System.out.println();
         cache.put("1", "1");
         cache.put("2", "2");
         cache.put("3", "3");
@@ -40,7 +40,7 @@ public class JavaQueue {
      * Last in First out
      */
     public void lifo() {
-        System.out.println("");
+        System.out.println();
         queue.push("1");
         queue.push("2");
         queue.push("3");

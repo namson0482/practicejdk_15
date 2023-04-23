@@ -68,7 +68,7 @@ public class QuickSortNon {
         int []numbers = {9, 8, 0, 1, 2, 4};
         QuickSortNon quickSortNon = new QuickSortNon();
         quickSortNon.quickSort(numbers);
-        System.out.println("");
+        System.out.println();
         for(int item: numbers) {
             System.out.print(item + " ");
         }

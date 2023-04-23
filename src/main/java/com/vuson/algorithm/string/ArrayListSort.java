@@ -1,4 +1,4 @@
-package vu.son.algorithm.string;
+package com.vuson.algorithm.string;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -37,7 +37,7 @@ public class ArrayListSort {
 		System.out.println(value);
 	}
 	
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 		
 		sortByJava8();
 

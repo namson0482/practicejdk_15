@@ -1,4 +1,4 @@
-package vu.son.leetcode.basic.maximum;
+package com.vuson.leetcode.basic.maximum;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.time.StopWatch;

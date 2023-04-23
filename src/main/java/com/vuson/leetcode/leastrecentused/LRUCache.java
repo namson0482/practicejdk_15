@@ -1,9 +1,6 @@
-package vu.son.leetcode.leastrecentused;
+package com.vuson.leetcode.leastrecentused;
 
-import java.util.Iterator;
-import java.util.LinkedHashSet;
-import java.util.LinkedList;
-import java.util.Set;
+import java.util.*;
 
 public class LRUCache {
 
@@ -29,7 +26,7 @@ public class LRUCache {
 
     /* Refers key x with in the LRU cache */
     public void refer(int key) {
-        if (get(key) == false)
+        if (!get(key))
             put(key);
     }
 
@@ -69,12 +66,12 @@ public class LRUCache {
         ca.refer(4);
         ca.refer(6);
         ca.display();
-        System.out.println("");
+        System.out.println();
         ca.displayOne();
-        System.out.println("");
+        System.out.println();
         ca.refer(3);
         ca.display();
-        System.out.println("");
+        System.out.println();
         ca.refer(5);
         ca.display();
     }

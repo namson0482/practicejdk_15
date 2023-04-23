@@ -1,4 +1,4 @@
-package vu.son.algorithm.string.graph.bfs;
+package com.vuson.algorithm.string.graph.bfs;
 
 // Java program to Clone an Undirected Graph
 
@@ -133,7 +133,7 @@ class Graph {
 
 // Driver code
 class MainBfs {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Graph graph = new Graph();
         GraphNode source = graph.buildGraph();
         System.out.println("BFS traversal of a graph before cloning");

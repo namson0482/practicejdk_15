@@ -1,4 +1,4 @@
-package vu.son.leetcode.leastrecentused;
+package com.vuson.leetcode.leastrecentused;
 
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -38,8 +38,9 @@ public class LeastRecentUsed {
 
     public void printValues() {
 
-        System.out.println("");
+        System.out.println();
         System.out.print("Values: ");
+
         LinkedList linkedList = new LinkedList(cache.keySet());
         Iterator iterator = linkedList.descendingIterator();
         while(iterator.hasNext()) {

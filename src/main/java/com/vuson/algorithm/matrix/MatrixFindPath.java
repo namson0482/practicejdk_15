@@ -1,4 +1,4 @@
-package vu.son.algorithm.matrix;
+package com.vuson.algorithm.matrix;
 
 // Print All path from top left to bottom right
 import java.util.Vector;
@@ -136,12 +136,10 @@ public class MatrixFindPath {
 
     public boolean isValid(int i, int j, Vector<Vector<Integer>> vec
             , Vector<Vector<Integer>> hash) {
-        if (i < 0 || j < 0
-                || i >= vec.size()
-                || j >= vec.get(0).size()
-                || hash.get(i).get(j) == 1)
-            return false;
-        return true;
+        return i >= 0 && j >= 0
+                && i < vec.size()
+                && j < vec.get(0).size()
+                && hash.get(i).get(j) != 1;
     }
 
     // Function to print all path

@@ -1,11 +1,11 @@
-package vu.son.algorithm.string;
+package com.vuson.algorithm.string;
 
 import java.util.*;
 
 public class FrequentlyCharacter {
 
     static void printOutCharacterFrequently(String input) {
-        char character[] = input.toCharArray();
+        char[] character = input.toCharArray();
         Map<Character, Integer> frequently = new HashMap<Character, Integer>();
         for (int i = 0; i < character.length; i++) {
             if (frequently.containsKey(character[i])) {

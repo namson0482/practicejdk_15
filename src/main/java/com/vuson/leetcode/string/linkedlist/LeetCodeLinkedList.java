@@ -23,7 +23,7 @@ public class LeetCodeLinkedList {
 
     public void printValues() {
         ListNode current = head;
-        System.out.println("");
+        System.out.println();
         while(current != null) {
             System.out.print(current.val + " ");
             current = current.next;

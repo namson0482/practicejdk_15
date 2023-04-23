@@ -1,4 +1,4 @@
-package vu.son.leetcode.array;
+package com.vuson.leetcode.array;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -60,7 +60,7 @@ public class InsertInterval {
         int [][]result = insertInterval.insert(intervals, newInterval);
         for (int i = 0; i < result.length; i++) {
             int[] temp = result[i];
-            System.out.println("");
+            System.out.println();
             for (int i1 = 0; i1 < temp.length; i1++) {
                 if (i1 == temp.length - 1) {
                     System.out.print(temp[i1] + " ");

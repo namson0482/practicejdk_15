@@ -1,4 +1,4 @@
-package vu.son.algorithm.string;
+package com.vuson.algorithm.string;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -9,7 +9,7 @@ public class FindOccurrenciesInArray {
 	public void findoutOccurrencies(String []inputs, int k) {
 		
 		Map<String, Integer> mapValues = new HashMap<String, Integer>() ;
-		List<String> listValues = Arrays.asList(inputs);
+		String[] listValues = inputs;
 		for(String value: listValues) {
 			if(!mapValues.containsKey(value)) {
 				mapValues.put(value, 1);

@@ -38,11 +38,10 @@ public class InterestingTime {
 				}
 			}
 		}
-		
-		if(mapValues.size() <= 2) return true;
-		return false;
-		
-	}
+
+        return mapValues.size() <= 2;
+
+    }
 
 	public static int findInterestingPoint(String s, String t) {
 

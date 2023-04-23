@@ -1,4 +1,4 @@
-package vu.son.algorithm.queue;
+package com.vuson.algorithm.queue;
 
 // Java program to reverse a Queue
 
@@ -33,7 +33,7 @@ public class Queue_reverse {
     }
 
     // Driver code
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         queue = new LinkedList<Integer>();
         queue.add(10);
         queue.add(20);

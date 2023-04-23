@@ -41,7 +41,7 @@ public class ArrayRemoveDuplicates {
 
         int []numbers = {1, 1, 2};
         ArrayRemoveDuplicates arrayRemoveDuplicates = new ArrayRemoveDuplicates();
-        int []res = arrayRemoveDuplicates.remove(numbers);
+        int []res = remove(numbers);
         for(int item: res)
             System.out.print(item +" ");
     }

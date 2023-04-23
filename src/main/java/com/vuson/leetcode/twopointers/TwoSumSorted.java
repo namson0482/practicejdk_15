@@ -1,4 +1,4 @@
-package vu.son.leetcode.datastructure.twopointers;
+package com.vuson.leetcode.datastructure.twopointers;
 
 public class TwoSumSorted {
 

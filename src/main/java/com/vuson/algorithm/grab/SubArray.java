@@ -46,8 +46,7 @@ public class SubArray {
 			printSubArrays(arr, start + 1, end);
 		}
 
-		return;
-	}
+    }
 
 	public static void main(String[] args) {
 

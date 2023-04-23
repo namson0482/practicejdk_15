@@ -14,7 +14,7 @@ public class InterSection {
 
         Set<Integer> result = new HashSet();
         for(int item: nums2) {
-            if(set.contains(item) && !result.contains(item)) {
+            if(set.contains(item)) {
                 result.add(item);
             }
         }
@@ -29,7 +29,7 @@ public class InterSection {
         int[] nums2 = {9,4,9,8,4};
 
         int[] res = intersection(nums1, nums2);
-        System.out.println("");
+        System.out.println();
         for (int value : res) {
             System.out.print(value + " ");
         }

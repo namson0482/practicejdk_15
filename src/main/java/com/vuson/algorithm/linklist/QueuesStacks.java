@@ -1,4 +1,4 @@
-package vu.son.algorithm.linklist;
+package com.vuson.algorithm.linklist;
 
 import java.util.Iterator;
 import java.util.LinkedList;

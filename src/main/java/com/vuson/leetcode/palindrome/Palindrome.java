@@ -1,4 +1,4 @@
-package vu.son.leetcode.palindrome;
+package com.vuson.leetcode.palindrome;
 
 /**
  * @author: Son Vu

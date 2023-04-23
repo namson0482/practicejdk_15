@@ -23,7 +23,7 @@ public class IpAddress {
                 StringBuilder sb = new StringBuilder();
                 int last = 0;
                 for (Integer dot : dots) {
-                    sb.append(s.substring(last, last + dot));
+                    sb.append(s, last, last + dot);
                     last += dot;
                     sb.append('.');
                 }

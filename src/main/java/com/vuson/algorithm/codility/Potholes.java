@@ -44,7 +44,7 @@ public class Potholes {
         Potholes potholes = new Potholes();
         String s = "...xxx..x.....xxx";
         int B = 7;
-        int result = potholes.solution(s, B);
+        int result = solution(s, B);
         System.out.println(result);
     }
 

@@ -1,4 +1,4 @@
-package vu.son.leetcode.matrix;
+package com.vuson.leetcode.matrix;
 
 public class IISpiral {
 
@@ -86,7 +86,7 @@ public class IISpiral {
         IISpiral spiral = new IISpiral();
         int [][]matrix = spiral.generateMatrix(4);
         for (int i = 0; i < matrix.length; i++) {
-            System.out.println("");
+            System.out.println();
             for (int i1 = 0; i1 < matrix[0].length; i1++) {
                 System.out.print(matrix[i][i1] + "    ");
             }

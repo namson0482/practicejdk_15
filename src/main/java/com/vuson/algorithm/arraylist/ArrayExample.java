@@ -14,12 +14,12 @@ public class ArrayExample {
         length = Integer.parseInt(value);
         array = new int[length];
         for(int i=0;i<array.length;i++) {
-            System.out.print(String.format("Enter value for element with index %d: ", i));
+            System.out.printf("Enter value for element with index %d: ", i);
             value = scanner.nextLine();
             array[i] = Integer.parseInt(value);
         }
 
-        System.out.println("");
+        System.out.println();
         System.out.print("Array have the values: ");
         for(int i=0;i<array.length;i++) {
             System.out.print(array[i] + " ");

@@ -110,14 +110,14 @@ public class Castle {
         int i = 0;
         int j = i + 1;
 
-        for (;i < nums.length && j < nums.length;) {
+        while (i < nums.length && j < nums.length) {
             if (nums[j] == nums[i]) {
                 ++i;
                 ++j;
             } else if (nums[j] > nums[i]) {
                 ++result;
                 int k = j + 1;
-                for (;k < nums.length && nums[k] >= nums[k - 1];) {
+                while (k < nums.length && nums[k] >= nums[k - 1]) {
                     ++k;
                 }
                 if (k == nums.length)
@@ -127,7 +127,7 @@ public class Castle {
             } else {
                 ++result;
                 int k = j + 1;
-                for (;k < nums.length && nums[k] <= nums[k - 1];) {
+                while (k < nums.length && nums[k] <= nums[k - 1]) {
                     ++k;
                 }
                 if (k == nums.length)

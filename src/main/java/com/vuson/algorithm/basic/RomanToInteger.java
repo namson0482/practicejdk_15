@@ -112,7 +112,7 @@ public class RomanToInteger {
         return result + toIntegerRecursive(input.substring(index));
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         String romanNumber = "MMMDCCXXIV";
         int result = toInteger(romanNumber);
         System.out.println("The Roman Number is: " + result);

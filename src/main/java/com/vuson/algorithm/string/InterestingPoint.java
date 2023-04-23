@@ -1,4 +1,4 @@
-package vu.son.algorithm.string;
+package com.vuson.algorithm.string;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -35,11 +35,10 @@ public class InterestingPoint {
 				}
 			}
 		}
-		
-		if(mapValues.size() <= 2) return true;
-		return false;
-		
-	}
+
+        return mapValues.size() <= 2;
+
+    }
 
 	public static int findInterestingPoint(String s, String t) {
 

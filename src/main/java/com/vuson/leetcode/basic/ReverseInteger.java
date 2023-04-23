@@ -28,7 +28,7 @@ public class ReverseInteger {
             n /= 10;
         }
         if(negative) {
-            result = 0 - result;
+            result = -result;
         }
         return result;
     }

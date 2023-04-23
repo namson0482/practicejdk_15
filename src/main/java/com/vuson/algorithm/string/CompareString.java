@@ -1,4 +1,4 @@
-package vu.son.algorithm.string;
+package com.vuson.algorithm.string;
 
 public class CompareString {
     public static void main(String[] args) {
@@ -6,7 +6,7 @@ public class CompareString {
         String str1 = "abc";
         String str2 = "abc";
 
-        String str3 = new String("abc");
+        String str3 = "abc";
 
         System.out.println(str1 == str2);
         System.out.println(str1 == str3);

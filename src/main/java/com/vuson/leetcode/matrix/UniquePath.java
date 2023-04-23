@@ -1,4 +1,4 @@
-package vu.son.leetcode.matrix;
+package com.vuson.leetcode.matrix;
 
 public class UniquePath {
 
@@ -20,7 +20,7 @@ public class UniquePath {
         return path[m - 1][n - 1];
     }
 
-    public int countUniquePath(int visited[][], int row, int col) {
+    public int countUniquePath(int[][] visited, int row, int col) {
 
 
         if (row > visited.length -1 || col > visited[0].length - 1) {

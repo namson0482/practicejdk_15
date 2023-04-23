@@ -57,7 +57,7 @@ public class CountAndSay {
 
     public static void main(String[] args) {
         CountAndSay count = new CountAndSay();
-        String value = count.countAndSay(3);
+        String value = countAndSay(3);
         System.out.println(value);
 
 

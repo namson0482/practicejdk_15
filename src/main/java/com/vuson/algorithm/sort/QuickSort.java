@@ -1,4 +1,4 @@
-package vu.son.algorithm.sort;
+package com.vuson.algorithm.sort;
 
 public class QuickSort {
 

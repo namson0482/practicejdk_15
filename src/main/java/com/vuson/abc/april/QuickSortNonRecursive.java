@@ -22,7 +22,7 @@ public class QuickSortNonRecursive {
         arr[j] = temp;
     }
 
-    public static int partition(int a[], int start, int end) {
+    public static int partition(int[] a, int start, int end) {
         // Pick the rightmost element as a pivot from the array
         int pivot = a[end];
 
@@ -72,7 +72,7 @@ public class QuickSortNonRecursive {
     }
 
     public static void main(String[] args) {
-        int a[] = {9, -3, 5, 2, 6, 8, -6, 1, 3};
+        int[] a = {9, -3, 5, 2, 6, 8, -6, 1, 3};
 
         iterativeQuicksort(a);
 

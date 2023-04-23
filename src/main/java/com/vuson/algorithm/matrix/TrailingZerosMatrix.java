@@ -1,4 +1,4 @@
-package vu.son.algorithm.matrix;
+package com.vuson.algorithm.matrix;
 
 public class TrailingZerosMatrix {
     // Stores the maximum count of zeros
@@ -75,7 +75,7 @@ public class TrailingZerosMatrix {
 //                {1, 10, 1}};
 
         //4
-        int mat[][] =
+        int[][] mat =
                 {{6, 25, 4, 10},
                 {12, 25 , 1, 15},
                 {7, 15, 15, 5}};

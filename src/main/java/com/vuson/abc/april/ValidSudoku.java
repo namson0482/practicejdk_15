@@ -20,7 +20,7 @@ public class ValidSudoku {
                 , {'.', '.', '.', '.', '8', '.', '.', '7', '9'}};
 
 
-        log.info("Sudoku is: {}", new ValidSudoku().isValidSudoku(board) == true ? "valid" : "invalid");
+        log.info("Sudoku is: {}", new ValidSudoku().isValidSudoku(board) ? "valid" : "invalid");
     }
 
     public boolean isValidSudoku(char[][] board) {

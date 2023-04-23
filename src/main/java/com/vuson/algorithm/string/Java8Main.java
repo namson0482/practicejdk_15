@@ -1,4 +1,4 @@
-package vu.son.algorithm.string;
+package com.vuson.algorithm.string;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +35,7 @@ public class Java8Main {
 //		String []inputs = {"", "1"};
 //		List<String> names = Arrays.asList(inputs);
 		
-		String str_3 = new String("namson");
+		String str_3 = "namson";
 		String str_1 = "namson";
 		String str_2 = str_3.intern();
 		
@@ -43,8 +43,8 @@ public class Java8Main {
 		System.out.println(str_1 == str_3);
 		System.out.println(str_1.equals(str_3));
 		
-//		vu.son.string.Java8Main vu.son.java8 = new vu.son.string.Java8Main();
-//		vu.son.java8.practiceStream();
+//		com.vuson.string.Java8Main com.vuson.java8 = new com.vuson.string.Java8Main();
+//		com.vuson.java8.practiceStream();
 		
 	}
 }

@@ -16,12 +16,10 @@ public class BankingAppWithdrawalServiceWithoutOpenClose {
 
     public void proceed() {
         for(int i=0;i<listAccount.size();i++) {
-            if(listAccount.get(i) instanceof CurrentAccountWithoutOpenClose) {
-                CurrentAccountWithoutOpenClose currentAccountWithoutOpenClose = (CurrentAccountWithoutOpenClose)listAccount.get(i);
+            if(listAccount.get(i) instanceof CurrentAccountWithoutOpenClose currentAccountWithoutOpenClose) {
                 currentAccountWithoutOpenClose.deposit(500);
                 currentAccountWithoutOpenClose.withdraw(100);
-            } else if (listAccount.get(i) instanceof SavingAccountWithoutOpenClose) {
-                SavingAccountWithoutOpenClose savingAccountWithoutOpenClose = (SavingAccountWithoutOpenClose)listAccount.get(i);
+            } else if (listAccount.get(i) instanceof SavingAccountWithoutOpenClose savingAccountWithoutOpenClose) {
                 savingAccountWithoutOpenClose.deposit(800);
                 savingAccountWithoutOpenClose.withdraw(1600);
             }

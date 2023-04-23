@@ -12,8 +12,9 @@ import java.util.stream.IntStream;
 public class FairIndex {
     public static int solution(List<Integer> a, List<Integer> b) {
 
-        if(a == null || b == null || a.size() != b.size())
+        if(a == null || b == null || a.size() < 2 || a.size() != b.size())
             return 0;
+
          int []A = a.stream().mapToInt(q->q).toArray();
          int []B = b.stream().mapToInt(q->q).toArray();
 
@@ -45,8 +46,8 @@ public class FairIndex {
 
     public static void main(String[] args) throws IOException {
 
-        int []array1 = new int[]{0, 4, -1, 0,  3};
-        int []array2 = new int[]{0, -2, 5, 0, 3};
+        int []array1 = new int[]{0, 2};
+        int []array2 = new int[]{0, 2};
 
         log.info(solution(Arrays.stream(array1).boxed().collect(Collectors.toList())
                 , IntStream.of(array2).boxed().collect(Collectors.toList())) + "");

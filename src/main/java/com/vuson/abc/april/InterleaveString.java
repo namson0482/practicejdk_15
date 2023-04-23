@@ -6,7 +6,7 @@ public class InterleaveString {
         if(s1.length() + s2.length() != s3.length())
             return false;
 
-        boolean dynamicProgramming[][] = new boolean[s1.length() + 1][s2.length() + 1];
+        boolean[][] dynamicProgramming = new boolean[s1.length() + 1][s2.length() + 1];
 
         for (int i = 0; i <= s1.length(); i++) {
             for (int j = 0; j <= s2.length(); j++) {

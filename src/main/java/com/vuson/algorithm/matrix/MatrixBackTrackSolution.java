@@ -1,4 +1,4 @@
-package vu.son.algorithm.matrix;
+package com.vuson.algorithm.matrix;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -7,12 +7,12 @@ import java.util.Set;
 
 class MatrixBackTrackSolution {
 
-    private static int[] BOTTOM_TO_UP = {-1,0};
-    private static int[] TOP_TO_DOWN = {1,0};
-    private static int[] LEFT_TO_RIGHT = {0,1};
-    private static int[] RIGHT_TO_LEFT = {0,-1};
+    private static final int[] BOTTOM_TO_UP = {-1,0};
+    private static final int[] TOP_TO_DOWN = {1,0};
+    private static final int[] LEFT_TO_RIGHT = {0,1};
+    private static final int[] RIGHT_TO_LEFT = {0,-1};
 
-    private static int[][] DIRECTIONS = new int[][] {BOTTOM_TO_UP, TOP_TO_DOWN, LEFT_TO_RIGHT, RIGHT_TO_LEFT};
+    private static final int[][] DIRECTIONS = new int[][] {BOTTOM_TO_UP, TOP_TO_DOWN, LEFT_TO_RIGHT, RIGHT_TO_LEFT};
 
     private static int maxTrailingZeroes = -1;
 

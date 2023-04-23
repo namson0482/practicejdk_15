@@ -56,7 +56,7 @@ public class Sum3Smaller {
 
 
     public static void main(String[] args) {
-        int arr[] = new int[] {-2, 0, 1, 3, 4, 1};
+        int[] arr = new int[] {-2, 0, 1, 3, 4, 1};
         int value = new Sum3Smaller().threeSumSmallerSecond(arr, 2);
         System.out.println(value);
     }
