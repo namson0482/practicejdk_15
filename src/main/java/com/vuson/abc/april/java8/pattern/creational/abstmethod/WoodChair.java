@@ -1,6 +1,6 @@
-package com.vuson.abc.april.java8.pattern.abst;
+package com.vuson.abc.april.java8.pattern.creational.abstmethod;
 
-import com.vuson.abc.april.java8.pattern.abst.itf.Chair;
+import com.vuson.abc.april.java8.pattern.creational.factorymethod.itf.Chair;
 
 public class WoodChair implements Chair {
     @Override

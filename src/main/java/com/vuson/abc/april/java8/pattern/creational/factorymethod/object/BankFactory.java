@@ -1,6 +1,6 @@
-package com.vuson.abc.april.java8.pattern.factorymethod;
+package com.vuson.abc.april.java8.pattern.creational.factorymethod.object;
 
-import com.vuson.abc.april.java8.pattern.factorymethod.itf.Bank;
+import com.vuson.abc.april.java8.pattern.creational.factorymethod.itf.Bank;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j

@@ -1,6 +1,6 @@
-package com.vuson.abc.april.java8.pattern.abst;
+package com.vuson.abc.april.java8.pattern.creational.abstmethod;
 
-import com.vuson.abc.april.java8.pattern.abst.itf.Table;
+import com.vuson.abc.april.java8.pattern.creational.factorymethod.itf.Table;
 
 public class WoodTable implements Table {
     @Override

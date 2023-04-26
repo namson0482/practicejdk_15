@@ -1,6 +1,6 @@
-package com.vuson.abc.april.java8.pattern.abst.factory;
+package com.vuson.abc.april.java8.pattern.creational.factorymethod;
 
-import com.vuson.abc.april.java8.pattern.abst.itf.MaterialType;
+import com.vuson.abc.april.java8.pattern.creational.factorymethod.itf.MaterialType;
 
 public class FurnitureFactory {
 
