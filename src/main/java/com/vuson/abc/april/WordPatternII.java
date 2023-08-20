@@ -4,6 +4,10 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.*;
 
+/**
+ * @author Son Vu
+ * @date Tue 2 May 2023
+ */
 @Slf4j
 public class WordPatternII {
     public static boolean wordPatternMatch(String pattern, String s) {

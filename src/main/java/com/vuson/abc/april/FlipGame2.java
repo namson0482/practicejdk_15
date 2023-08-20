@@ -11,7 +11,7 @@ public class FlipGame2 {
         if (s == null || s.length() < 2) {
             return false;
         }
-        HashMap<String, Boolean> winMap = new HashMap<String, Boolean>();
+        HashMap<String, Boolean> winMap = new HashMap();
         return helper(s, winMap);
     }
 
@@ -34,7 +34,7 @@ public class FlipGame2 {
 
 
     public static void main(String[] args) {
-        String input  = "++++++++";
+        String input  = "++++";
         FlipGame2 flip = new FlipGame2();
         log.info(flip.canWin(input) + "");
     }
