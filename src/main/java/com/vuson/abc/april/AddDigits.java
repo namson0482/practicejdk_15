@@ -14,10 +14,6 @@ public class AddDigits {
         return num;
     }
 
-    /**
-     *
-     * @param args
-     */
     public static void main(String[] args) {
         int num = 97;
         int res = new AddDigits().addDigits(num);
